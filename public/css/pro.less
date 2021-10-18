@@ -1,46 +1,39 @@
-.affix{
-    top: 0;
-    left: 75%;
-    background-color: #015CAD!important;
-    width: 265px;
-    padding: 0;
-}
-.sl_product {
-    margin-bottom: 50px;
-    width: 100%;
-    .m{
-        padding: 0;
-        margin-top: -20px;
-        width: 100%;
-        @media screen and (max-width:767px){
-            margin-top: -90px;
-            
-        }
-    }
-
     .container {
-        
+        .affix{
+            top: 0;
+            right: 140px;
+            background-color: #015CAD!important;
+            width: 18%;
+            padding: 0;
+            @media screen and (min-width:920px){
+                top:0;
+                right:80px;
+                width:20%;
+            }
+        }
         .td {
-            
-            float     : right;
-           
-            .sl_gy { margin-top: -5px;
+            float: right;
+
+            .sl_gy {
+                margin-top      : -25px;
                 padding         : 15px;
                 background-color: #015CAD;
-                width           :100%;
+                width           : 100%;
                 height          : 130px;
-                color        : white;
-                border-bottom: 2px solid white;
+                color           : white;
+                border-bottom   : 2px solid white;
             }
 
             .navp {
                 .nav {
-                    top        : 0;
+                    top           : 0;
                     // width      : 100%;
-                    line-height: 50px;
-                    padding: 0;
+                    line-height   : 50px;
+                    padding       : 0;
+
                     li {
                         padding: 0;
+
                         a {
                             color           : white;
                             text-align      : center;
@@ -48,39 +41,40 @@
 
                             &:hover {
                                 background-color: #fd7e14;
-                                
+
                             }
-                            
+
                         }
 
-                        &.active {
-                            background-color: #fd7e14;
+                        .active {
+
                             a,
                             a:hover,
                             a:focus {
                                 background-color: #fd7e14;
-                               
+
                             }
 
 
                         }
                     }
-                    
+
                 }
             }
-            
+
         }
 
         .tab-content {
+            margin-bottom: 50px;
             .tt {
                 width: 100%;
 
-                position     : relative;
-                height       : 150px;
-                border-bottom: 1px dashed #fd7e14;
-                margin-bottom: 40px;
-                padding-top  : 100px;
-                line-height  : 44px;
+                position        : relative;
+                height          : 100px;
+                border-bottom   : 1px dashed #fd7e14;
+                // margin-bottom: 40px;
+                padding-top     : 50px;
+                line-height     : 44px;
 
                 .title {
                     float        : left;
@@ -105,21 +99,26 @@
             }
 
             .zz {
+                margin-top: 20px;
+                width     : 100%;
+
                 a {
+                    float: left;
+
                     img {
                         width: 100%;
                     }
 
                     p {
-                        height         : 40px;
-                        line-height    : 25px;
-                        padding        : 10px 0;
-                        text-align     : center;
-                        color          : #333;
-                        text-decoration: none;
+                        height            : 30px;
+                        line-height       : 30px;
+                        // padding        : 10px 0;
+                        text-align        : center;
+                        color             : #333;
+                        text-decoration   : none;
 
                         &:hover {
-                            color          : 015CAD;
+                            color          : #015CAD;
                             text-decoration: none;
                         }
                     }
@@ -127,5 +126,3 @@
             }
         }
     }
-   
-}

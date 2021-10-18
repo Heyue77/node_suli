@@ -1,0 +1,66 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>关于苏立</title>
+{{/block}} {{block 'style'}}
+<link rel="stylesheet" href="../public/css/pro.css"> {{/block}} {{block 'content'}}
+<div class="d">
+    <img src="../public/img/tt.jpg" alt="" style="width:100%;position: relative;top:-20px;z-index:-1">
+    <div class="container">
+        <div class="row">
+            <div class="td col-lg-3 col-md-3 hidden-sm hidden-xs right" data-spy="affix" data-offset-top="500 ">
+                <div class="sl_gy text-center hidden-sm hidden-xs">
+                    <h3>关于苏立</h3>
+                    <p>- About Su Li -</p>
+                </div>
+                <div class="navp">
+                    <ul class="nav hidden-xs hidden-sm">
+                        <li class="active">
+                            <a href="s1.html">公司概况</a></li>
+                        <li><a href="s2.html">企业文化</a></li>
+                        <li><a href="s3.html">资质荣誉</a></li>
+                        <li><a href="s4.html">发展历程</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content col-lg-9 col-md-9 left">
+                <div class="tab-pane active">
+                    <div class="tt">
+                        <div class="title">企业文化</div>
+                        <div class="adr"><span class="pos">当前位置：</span><a href=?mid=2>关于苏立</a> >> <a href=?mid=7>企业文化</a></div>
+                    </div>
+                    <div class="whn">
+                        <strong><span style="font-size:16px;">我们的使命</span></strong><br /> 专注热芯30年，让生活更健康
+                        <br />
+                        <br />
+                        <strong><span style="font-size:16px;">我们的愿景</span></strong><br /> 引领行业、做世界的苏立
+                        <br />
+                        <br />
+                        <strong><span style="font-size:16px;">我们的价值观</span></strong><br /> 责任、创新、进取、共赢
+                        <br />
+                        <br />
+                        <strong><span style="font-size:16px;">我们的服务理念</span></strong><br /> 我的热芯，您的放心
+                        <br />
+                        <br />
+                        <strong><span style="font-size:16px;">我们的宗旨</span></strong><br /> 拥有最优秀的团队，成为最健康的公司
+                        <br />
+                        <br />
+                        <strong><span style="font-size:16px;">我们的作风</span></strong><br /> 敢想敢做、没有推诿、绝对执行、永不放弃
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/block}} {{block 'script'}}
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                var aTop = "500";
+                if ($(this).scrollTop() >= aTop) {
+                    $('#affix-this').css("position", "fixed");
+                    $('#affix-this').css("top", "0");
+                    $('#affix-this').css("width", "100%");
+                }
+            });
+        });
+    </script>{{/block}}

@@ -1,0 +1,100 @@
+{{extend './_layouts/layout.html'}} {{block 'title'}}
+<title>关于苏立</title>
+{{/block}} {{block 'style'}}
+<link rel="stylesheet" href="../public/css/pro.css"> {{/block}}
+<!-- <link rel="stylesheet" href="./css/bottom.css">
+<link rel="stylesheet" href="./fonts/iconfont.css"> -->
+{{block 'content'}}
+<div class="d">
+    <img src="../public/img/tt.jpg" alt="" style="width:100%;position: relative;top:-20px;z-index:-1">
+    <div class="container">
+        <div class="row">
+            <div class="td col-lg-3 col-md-3 hidden-sm hidden-xs right" data-spy="affix" data-offset-top="500 ">
+                <div class="sl_gy text-center hidden-sm hidden-xs">
+                    <h3>关于苏立</h3>
+                    <p>- About Su Li -</p>
+                </div>
+                <div class="navp">
+                    <ul class="nav hidden-xs hidden-sm">
+                        <li class="active">
+                            <a href="s1.html">公司概况</a></li>
+                        <li><a href="s2.html">企业文化</a></li>
+                        <li><a href="s3.html">资质荣誉</a></li>
+                        <li><a href="s4.html">发展历程</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content col-lg-9 col-md-9 left">
+                <div class="tab-pane active">
+                    <div class="tt">
+                        <div class="title">资质荣誉</div>
+                        <div class="adr"><span class="pos">当前位置：</span><a href=?mid=2>关于苏立</a> >> <a href=?mid=7>资质荣誉</a></div>
+                    </div>
+                    <div class="zz">
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="./about/n1.html" action="./about/n1.html">
+                            <img src="../public/img/juren.jpg" alt="">
+                            <p class="title" style="overflow: hidden;">国家工信部第二批专精特新”小巨人“企业</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="./about/n2.html" action="./about/n2.html">
+                            <img src="../public/img/renke.jpg" alt="">
+                            <p>国家认可委"CNAS"实验中心</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n3.html">
+                            <img src="../public/img/jinbu.jpg" alt="">
+                            <p>安徽省科技进步奖</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n4.html">
+                            <img src="../public/img/gaoxin.jpg" alt="">
+                            <p>高新科技企业</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n5.html">
+                            <img src="../public/img/tuchu.jpg" alt="">
+                            <p style="overflow: hidden;">天津市蓟州区"煤改电"项目突出贡献企业</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n6.html">
+                            <img src="../public/img/huiyuan.jpg" alt="">
+                            <p class="" style="overflow: hidden;">安徽省芜湖市上市企业协会-第一届理事会会员单位</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n7.html">
+                            <img src="../public/img/boshihou.jpg" alt="">
+                            <p>博士后科研工作站</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n8.html">
+                            <img src="../public/img/lianhe.jpg" alt="">
+                            <p style="overflow: hidden;">中国科学院先进热控材料联合研究中心</p>
+                        </a>
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n9.html">
+                            <img src="../public/img/zhongxin.jpg" alt="">
+                            <p>安徽省认定企业技术</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/block}} {{block 'script'}}
+    <script>
+        $(a).click.function(() => {
+            $.ajax({
+                url: "http://localhost:8000/about/:id",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(HonoursData),
+                success: function(data) {
+                    console.log("成功", data)
+                    if (data.code === 20000) {
+                        alert(data.msg)
+                        window.location.href = "/logout"
+                    } else if (data.code === 19999) {
+                        alert(data.err)
+                        $("#modify_form")[0].reset()
+                    }
+                },
+                error: function(err) {
+                    console.log("失败", err)
+                }
+            })
+        })
+    </script>
+    {{/block}}

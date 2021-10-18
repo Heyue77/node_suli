@@ -1,0 +1,96 @@
+.container .affix {
+  top: 0;
+  right: 140px;
+  background-color: #015CAD !important;
+  width: 18%;
+  padding: 0;
+}
+@media screen and (min-width: 920px) {
+  .container .affix {
+    top: 0;
+    right: 80px;
+    width: 20%;
+  }
+}
+.container .td {
+  float: right;
+}
+.container .td .sl_gy {
+  margin-top: -25px;
+  padding: 15px;
+  background-color: #015CAD;
+  width: 100%;
+  height: 130px;
+  color: white;
+  border-bottom: 2px solid white;
+}
+.container .td .navp .nav {
+  top: 0;
+  line-height: 50px;
+  padding: 0;
+}
+.container .td .navp .nav li {
+  padding: 0;
+}
+.container .td .navp .nav li a {
+  color: white;
+  text-align: center;
+  background-color: #015CAD;
+}
+.container .td .navp .nav li a:hover {
+  background-color: #fd7e14;
+}
+.container .td .navp .nav li .active a,
+.container .td .navp .nav li .active a:hover,
+.container .td .navp .nav li .active a:focus {
+  background-color: #fd7e14;
+}
+.container .tab-content {
+  margin-bottom: 50px;
+}
+.container .tab-content .tt {
+  width: 100%;
+  position: relative;
+  height: 100px;
+  border-bottom: 1px dashed #fd7e14;
+  padding-top: 50px;
+  line-height: 44px;
+}
+.container .tab-content .tt .title {
+  float: left;
+  font-size: 24px;
+  border-bottom: 5px solid #fd7e14;
+  margin-bottom: -20px;
+}
+.container .tab-content .tt .adr {
+  float: right;
+  right: 50px;
+}
+.container .tab-content .tt .adr span,
+.container .tab-content .tt .adr a {
+  color: #333;
+}
+.container .tab-content .pit {
+  margin-bottom: 20px;
+}
+.container .tab-content .zz {
+  margin-top: 20px;
+  width: 100%;
+}
+.container .tab-content .zz a {
+  float: left;
+}
+.container .tab-content .zz a img {
+  width: 100%;
+}
+.container .tab-content .zz a p {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+}
+.container .tab-content .zz a p:hover {
+  color: #015CAD;
+  text-decoration: none;
+}
