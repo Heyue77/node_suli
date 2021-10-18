@@ -1,11 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const News = require("../models/news");
+const Equipment = require("../models/equipment");
+const Honour = require("../models/honour");
 const { Mongoose } = require("mongoose");
 
 //访问根路径来到首页
-router.get("/",(req,res)=>{
-    res.render("index.html");
+router.get("/",async (req,res)=>{
+    //荣誉资质数据
+    var honourResult=await Honour.find().limit(4).sort({id:1});
+    //新闻中心数据
+    var newsResult=await News.find().limit(3).sort({id:1});
+    //实验中心数据
+    var expResult=await Equipment.find().sort({id:1});
+    res.render("index.html",{expResult,honourResult,newsResult});
 })
 //关于苏立部分开始
 router.get("/aboutSu",(req,res)=>{
@@ -26,13 +34,6 @@ router.get("/news",(req,res)=>{
 router.get("/news/news12",async (req,res)=>{
     res.type('html');
     var result=await News.find();
-    // var time=News.aggregate({
-    //     $project: {
-    //         "new_string": {
-    //             $substr: ['$created_time', 0 , 7 ]
-    //         }
-    //     }
-    // })
     res.render("news/news12.html",{result});
     return;
    

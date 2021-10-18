@@ -1,5 +1,5 @@
 .newsBg {
-  background-image: url(../homeImg/work.jpg);
+  background-image: url(/public/img/work.jpg);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;

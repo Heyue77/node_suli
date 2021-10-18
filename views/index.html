@@ -7,17 +7,17 @@
 {{block 'style'}}
 <!-- 轮播图样式 -->
 <link rel="stylesheet" href="/public/package/swiper-bundle.min.css">
-<link rel="stylesheet" href="/public/css/home/loop.css">
+<link rel="stylesheet" href="/public/css/loop.css">
 <!-- 产品展示样式 -->
-<link rel="stylesheet" href="/public/css/home/pro_show.css">
+<link rel="stylesheet" href="/public/css/pro_show.css">
 <!-- 公司介绍样式 -->
-<link rel="stylesheet" href="/public/css/home/intro.css">
+<link rel="stylesheet" href="/public/css/intro.css">
 <!-- 实验中心样式 -->
-<link rel="stylesheet" href="/public/css/home/exp.css">
+<link rel="stylesheet" href="/public/css/expH.css">
 <!-- 新闻中心样式 -->
-<link rel="stylesheet" href="/public/css/home/news.css">
+<link rel="stylesheet" href="/public/css/news.css">
 <!-- 底部轮播图 -->
-<link rel="stylesheet" href="/public/css/home/btmLoop.css">
+<link rel="stylesheet" href="/public/css/btmLoop.css">
  {{/block}}
 
 {{block 'content'}}
@@ -27,10 +27,10 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="/public/img/homeImg/20218414208623.jpg" alt="">
+                <img src="/public/img/20218414208623.jpg" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="/public/img/homeImg/202184152250765.jpg" alt="">
+                <img src="/public/img/202184152250765.jpg" alt="">
             </div>
         </div>
         <!-- 下标 -->
@@ -54,20 +54,20 @@
         </div>
         <ul class="pro_content">
             <li>
-                <a href="#"><img src="./homeImg/pro1.jpg" alt="" class="img-responsive"></a>
-                <a href="#">
+                <a href="#"><img src="/public/img/pro1.jpg" alt="" class="img-responsive"></a>
+                <a href="/product">
                     <p>清洁热能</p>
                 </a>
             </li>
             <li>
-                <a href="#"><img src="./homeImg/pro2.jpg" alt="" class="img-responsive"></a>
-                <a href="#">
+                <a href="#"><img src="/public/img/pro2.jpg" alt="" class="img-responsive"></a>
+                <a href="/product">
                     <p>健康电器</p>
                 </a>
             </li>
             <li>
-                <a href="#"><img src="./homeImg/pro3.jpg" alt="" class="img-responsive"></a>
-                <a href="#">
+                <a href="#"><img src="/public/img/pro3.jpg" alt="" class="img-responsive"></a>
+                <a href="/product">
                     <p>电热部件</p>
                 </a>
             </li>
@@ -89,7 +89,7 @@
     <div class="intro_content">
         <div class="view">
             <div class="intro_img">
-                <img src="/public/img/homeImg/introImg.jpg" alt="">
+                <img src="/public/img/introImg.jpg" alt="">
             </div>
         </div>
         <div class="intro_in">
@@ -117,62 +117,16 @@
         </div>
         <div class="exp_content">
             <ul>
+                {{each expResult}}
                 <li>
                     <a href="#">
                         <div class="exp_img">
-                            <img src="./homeImg/exp1.jpg" alt="X荧光光谱分析测试仪" class="img-responsive">
+                            <img src="/public/img/{{$value.img}}" alt="{{$value.name}}" class="img-responsive">
                         </div>
-                        <p>X荧光光谱分析测试仪</p>
+                        <p>{{$value.name}}</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <div class="exp_img">
-                            <img src="./homeImg/exp2.jpg" alt="突跳式限温器寿命试验机" class="img-responsive">
-                        </div>
-                        <p>突跳式限温器寿命试验机</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="exp_img">
-                            <img src="./homeImg/exp3.jpg" alt="万能试验机" class="img-responsive">
-                        </div>
-                        <p>万能试验机</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="exp_img">
-                            <img src="./homeImg/exp4.jpg" alt="布洛维硬度计" class="img-responsive">
-                        </div>
-                        <p>布洛维硬度计</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="exp_img">
-                            <img src="./homeImg/exp5.jpg" alt="光学影像测量仪" class="img-responsive">
-                        </div>
-                        <p>光学影像测量仪</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="exp_img">
-                            <img src="./homeImg/exp6.jpg" alt="金相显微镜" class="img-responsive">
-                        </div>
-                        <p>金相显微镜</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="exp_img">
-                            <img src="./homeImg/exp7.jpg" alt="盐雾腐蚀箱" class="img-responsive">
-                        </div>
-                        <p>盐雾腐蚀箱</p>
-                    </a>
-                </li>
+                {{/each}}
             </ul>
         </div>
     </div>
@@ -183,30 +137,14 @@
     <div class="container">
         <div class="left">
             <ul>
+                {{each honourResult}}
                 <li>
                     <a href="#">
-                        <img src="./homeImg/news1.jpg" alt="国家工信部第二批专精特新“小巨人”企业">
+                        <img src="{{$value.img}}" alt="{{$value.title}}">
                         <span class="glyphicon glyphicon-eye-open"></span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="./homeImg/news2.jpg" alt="国家认可委“CNAS”实验中心">
-                        <span class="glyphicon glyphicon-eye-open"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./homeImg/news3.jpg" alt="安徽省科技进步奖">
-                        <span class="glyphicon glyphicon-eye-open"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./homeImg/news4.jpg" alt="高新技术企业">
-                        <span class="glyphicon glyphicon-eye-open"></span>
-                    </a>
-                </li>
+                {{/each}}
             </ul>
 
         </div>
@@ -216,50 +154,20 @@
                 <p class="title_two ">- News Center -</p>
             </div>
             <div class="news_content">
+                {{each newsResult}}
                 <div class="news_item clearfix">
                     <div class="item_left">
-                        <p>28</p>
-                        <p>2021-09</p>
+                        <p>{{$value.created_time.getDate()}}</p>
+                        <p>{{$value.created_time.toString().slice(11,15)}}-{{$value.created_time.toString().slice(8,10)}}</p>
                     </div>
                     <div class="item_right">
-                        <a href="#" target="_blank" title="苏立科技荣获安徽省第八届工业设计大赛金奖" class="atext">苏立科技荣获安徽省第八届工业设计大赛金奖
+                        <a href="#" target="_blank" title="{{$value.title}}" class="atext">{{$value.title}}
                         </a>
-                        <p>
-                            安徽省经信厅于2021年9月27日在安徽创新馆举办“安徽省第八届工业设计大赛”颁奖活动，
-                            我司参赛作品“智能消毒干衣柜”荣获本届大赛金奖。…
-                        </p>
+                        <p>  {{$value.paragraph}}</p>
+                      
                     </div>
                 </div>
-                <div class="news_item clearfix">
-                    <div class="item_left">
-                        <p>07</p>
-                        <p>2021-09</p>
-                    </div>
-                    <div class="item_right">
-                        <a href="#" target="_blank" title="苏立科技成功认定为“省级工业设计中心”"
-                            class="atext">苏立科技成功认定为“省级工业设计中心”</a>
-                        </a>
-                        <p>
-                            2021年9月6日，安徽省经济和信息化厅官网公布了2021年（第八批）省级工业设计中心拟认定名单，
-                            拟认定155家企业为省级工业设计中心，安徽苏立科技股份有限公司工业…
-                        </p>
-                    </div>
-                </div>
-                <div class="news_item clearfix">
-                    <div class="item_left">
-                        <p>12</p>
-                        <p>2021-08</p>
-                    </div>
-                    <div class="item_right">
-                        <a href="#" target="_blank" title="苏立用“芯”“智”造，市级数字化车间来了！"
-                            class="atext ">苏立用“芯”“智”造，市级数字化车间来了！</a>
-                        </a>
-                        <p>
-                            热烈祝贺安徽苏立科技股份有限公司“水加热管车间”获批“芜湖市数字化车间”荣誉！
-                            2021年7月6日，芜湖市经信局公布2021年市级数字化车间…
-                        </p>
-                    </div>
-                </div>
+                {{/each}}           
             </div>
         </div>
     </div>
@@ -270,14 +178,14 @@
     <div class="container">
         <div class="wrapper">
             <div class="boxes">
-                <div class="box "><img src="/public/img/homeImg/btm1.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm2.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm3.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm4.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm5.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm6.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm7.jpg" alt="" class="img-responsive"></div>
-                <div class="box "><img src="/public/img/homeImg/btm8.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm1.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm2.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm3.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm4.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm5.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm6.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm7.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/btm8.jpg" alt="" class="img-responsive"></div>
             </div>
         </div>
         <div class="left_btn glyphicon glyphicon-triangle-left"></div>

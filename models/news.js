@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 var newsSchema = new mongoose.Schema({
 	title: String,
+	paragraph:String,
 	created_person: {
 		type: String,
 		defalut: "安徽苏立科技"
@@ -11,13 +12,11 @@ var newsSchema = new mongoose.Schema({
 	},
 	created_time: {
 		type: Date,
-		// default: Date.now
 	},
-	view_num: {
+	attention: {
 		type: Number,
-		default: 200
 	},
-  content:String
+    content:String
 });
 
 var News = mongoose.model("news", newsSchema);
