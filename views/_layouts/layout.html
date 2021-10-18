@@ -1,0 +1,48 @@
+<!-- 模板页面 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 占坑-title -->
+  {{block 'title'}} {{/block}}
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/public/css/header/nav.css">
+  <link rel="stylesheet" href="/public/css/header/top.css">
+  <link rel="stylesheet" href="/public/css/footer/bottom.css">
+  <link rel="stylesheet" href="/public/fonts/iconfont.css">
+
+
+  <!-- 占坑-样式 -->
+  {{block 'style'}} {{/block}}
+</head>
+
+<body>
+  <!-- 引入头部 -->
+  {{include '../_partials/header.html'}}
+  <!-- 占坑-内容 -->
+  {{block 'content'}} {{/block}}
+  <!-- 引入尾部 -->
+  {{include '../_partials/footer.html'}}
+
+  <script src="/node_modules/jquery/jquery.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+  <!-- 底部js -->
+  <script>
+    $(".dropdown-menu>.li2").mouseover(function () {
+      $(".dropdown-menu>.li1").removeClass("active")
+      $(".dropdown-menu>.li2").addClass("active")
+    })
+    $(".dropdown-menu>.li1").mouseover(function () {
+      $(".dropdown-menu>.li2").removeClass("active")
+      $(".dropdown-menu>.li1").addClass("active")
+    })
+  </script>
+  <!--占坑-script  -->
+  {{block 'script'}} {{/block}}
+</body>
+
+</html>

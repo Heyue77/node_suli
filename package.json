@@ -1,0 +1,30 @@
+{
+  "name": "suLi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heyue77/Heyue77.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heyue77/Heyue77.github.io/issues"
+  },
+  "homepage": "https://github.com/Heyue77/Heyue77.github.io#readme",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "bootstrap": "^3.3.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1",
+    "express-session": "^1.17.2",
+    "jquery": "^1.9.1",
+    "mongoose": "^6.0.11"
+  }
+}

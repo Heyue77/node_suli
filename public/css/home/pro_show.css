@@ -1,0 +1,127 @@
+.suLi_pro_show {
+  padding: 80px 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.suLi_pro_show .pro_title {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+.suLi_pro_show .pro_title p {
+  margin: 0;
+  padding: 0;
+}
+.suLi_pro_show .pro_title p:first-child {
+  font-size: 2.4rem;
+}
+.suLi_pro_show .pro_title p:last-child {
+  font-size: 1.128rem;
+}
+.suLi_pro_show .w {
+  width: 1200px;
+}
+.suLi_pro_show .pro_content {
+  width: 100%;
+  height: 280px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+.suLi_pro_show .pro_content li {
+  width: 100%;
+  list-style: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+.suLi_pro_show .pro_content li:nth-child(2) {
+  margin-left: -1px;
+}
+.suLi_pro_show .pro_content li:last-child {
+  margin-left: -1px;
+}
+.suLi_pro_show .pro_content li a {
+  display: block;
+}
+.suLi_pro_show .pro_content li a:first-of-type {
+  width: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+.suLi_pro_show .pro_content li a:first-of-type img {
+  width: 338px;
+  box-sizing: border-box;
+  margin: 30px auto 0;
+}
+.suLi_pro_show .pro_content li a:last-child:hover {
+  text-decoration: none;
+}
+.suLi_pro_show .pro_content li a:last-child:hover p {
+  color: #015cad;
+}
+.suLi_pro_show .pro_content li a p {
+  margin: 10px auto;
+  color: #333;
+  font-size: 1.6rem;
+}
+.suLi_pro_show .pro_more {
+  margin: 30px auto;
+  text-align: center;
+}
+.suLi_pro_show .pro_more a {
+  display: inline-block;
+  width: 176px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #6c757d;
+  background-color: #e9ecef;
+  font-size: 1.4rem;
+}
+.suLi_pro_show .pro_more a:hover {
+  color: #fff;
+  background-color: #015CAD;
+  text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+  .suLi_pro_show .w {
+    width: 100%;
+  }
+  .suLi_pro_show .pro_content {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .suLi_pro_show .pro_content li {
+    height: 300px;
+    border: none;
+    list-style: none;
+    padding: 15px;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+  }
+  .suLi_pro_show .pro_content li img {
+    width: 338px;
+  }
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: inline-block;
+}

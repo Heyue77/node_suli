@@ -1,0 +1,37 @@
+{
+  "id": "2839343",
+  "name": "苏立",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6049799",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "181901",
+      "name": "邮箱",
+      "font_class": "mail",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "6940841",
+      "name": "电话",
+      "font_class": "dianhua",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "22328667",
+      "name": "电话簿",
+      "font_class": "dianhuabu",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    }
+  ]
+}

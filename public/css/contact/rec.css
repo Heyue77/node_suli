@@ -1,0 +1,152 @@
+body {
+  font-size: 1.4rem;
+}
+.sbanner img {
+  max-width: 100%;
+}
+.affix {
+  top: 0px;
+  width: 20%;
+}
+.rec > .container {
+  max-width: 1200px;
+}
+.rec > .container .row {
+  padding-top: 80px;
+  padding-bottom: 80px ;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.rec > .container .row .col-1 {
+  position: absulte;
+  top: -90px;
+  overflow: hidden;
+  float: right;
+  height: 249px;
+}
+.rec > .container .row .col-1 .position-sticky {
+  position: absulte;
+  z-index: 100px;
+  background-color: #015CAD;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+.rec > .container .row .col-1 .position-sticky .stickyTitle {
+  padding: 36px;
+  height: 115px;
+  line-height: 115px;
+  border-bottom: 1px solid white;
+}
+.rec > .container .row .col-1 .position-sticky .stickyTitle h3 {
+  margin: 0;
+}
+.rec > .container .row .col-1 .position-sticky .stickyTitle > div {
+  line-height: 20px;
+}
+.rec > .container .row .col-1 .position-sticky .stickyContent ul {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 134px;
+}
+.rec > .container .row .col-1 .position-sticky .stickyContent ul li {
+  height: 61px;
+  line-height: 60px;
+  background-color: #015CAD;
+  color: white;
+  display: block;
+}
+.rec > .container .row .col-1 .position-sticky .stickyContent ul li.active {
+  background-color: #F18C00;
+}
+.rec > .container .row .col-1 .position-sticky .stickyContent ul li:hover {
+  background-color: #F18C00;
+}
+.rec > .container .row .col-1 .position-sticky .stickyContent ul li:hover a {
+  text-decoration: none;
+}
+.rec > .container .row .col-1 .position-sticky .stickyContent ul li a {
+  color: white;
+}
+.rec > .container .row .col-2 {
+  height: 200px;
+  overflow: hidden;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: transparent;
+}
+.rec > .container .row .col-2 .position-sticky2 {
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+}
+.rec > .container .row .col-2 .position-sticky2 .stickyContent2 {
+  width: 100%;
+  height: 40px;
+}
+.rec > .container .row .col-2 .position-sticky2 .stickyContent2 ul {
+  width: 100%;
+  height: 40px;
+}
+.rec > .container .row .col-2 .position-sticky2 .stickyContent2 ul li {
+  text-align: center;
+  width: 44%;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+  background-color: #015CAD;
+}
+.rec > .container .row .col-2 .position-sticky2 .stickyContent2 ul li:hover {
+  background-color: #F18C00;
+}
+.rec > .container .row .col-2 .position-sticky2 .stickyContent2 ul li:hover a {
+  text-decoration: none;
+}
+.rec > .container .row .col-2 .position-sticky2 .stickyContent2 ul li a {
+  color: white;
+}
+.rec > .container .row .col-2 .guide {
+  width: 100%;
+  height: 56px;
+  border-bottom: 1px dashed #F18C00;
+  margin-bottom: 30px !important;
+}
+.rec > .container .row .col-2 .guide .guiTitle {
+  float: left;
+  height: 58px;
+  line-height: 2em;
+  margin-top: 2px;
+  box-sizing: border-box;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #6c757d;
+  border-bottom: 5px solid #F18C00;
+}
+.rec > .container .row .col-2 .guide .guiLocation {
+  float: right;
+  color: #6c757d;
+  text-align: right;
+  line-height: 58px;
+}
+.rec > .container .row .col-2 .guide .guiLocation a {
+  color: #6c757d;
+  font-size: 1.4rem;
+}
+.rec > .container .row .col-2 .guide .guiLocation a:hover,
+.rec > .container .row .col-2 .guide .guiLocation a:focus {
+  text-decoration: none;
+}
+.rec > .container .row .col-2 .body {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.rec > .container .row .col-2 .body .content {
+  overflow: hidden;
+  height: 140px;
+}
+.rec .clearpos {
+  position: static;
+}

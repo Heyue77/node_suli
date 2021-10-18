@@ -1,0 +1,54 @@
+.btm_loop {
+  width: 100%;
+  height: 160px;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+.btm_loop .container {
+  position: relative;
+}
+.btm_loop .wrapper {
+  height: 112px;
+  position: relative;
+  margin: 0 auto ;
+  background: #ccc;
+  overflow: hidden;
+}
+.btm_loop .box {
+  width: 170px;
+  height: 112px;
+  position: absolute;
+  background: red;
+  font-size: 25px;
+  line-height: 100px;
+  text-align: center;
+}
+.btm_loop .box img {
+  width: 170px;
+  height: 112px;
+}
+.btm_loop .box:nth-child(odd) {
+  background: #f8f8f8;
+}
+.btm_loop .box:nth-child(even) {
+  background: #eee;
+}
+.btm_loop .boxes {
+  position: relative;
+  left: -170px;
+}
+.btm_loop .left_btn {
+  position: absolute;
+  top: 50px;
+  left: -1%;
+  color: #333333;
+  z-index: 99;
+}
+.btm_loop .right_btn {
+  position: absolute;
+  top: 50px;
+  right: -1%;
+  color: #333333;
+  z-index: 99;
+}

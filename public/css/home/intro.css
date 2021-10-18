@@ -1,0 +1,168 @@
+.suLi_introduce {
+  width: 100%;
+  height: 755px;
+  padding: 80px 0;
+  background: url("/public/img/homeImg/building.jpg") no-repeat center;
+}
+.suLi_introduce .intro_title {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+.suLi_introduce .intro_title p {
+  position: absolute;
+  text-align: center;
+}
+.suLi_introduce .intro_title p.title_one {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #fff;
+  z-index: 20;
+  top: 40px;
+  left: 50%;
+  margin-left: -68px;
+}
+.suLi_introduce .intro_title p.title_one::before {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: -170px;
+  width: 500px;
+  height: 1px;
+  background-color: #fff;
+  opacity: 1;
+  z-index: 30;
+}
+.suLi_introduce .intro_title p.title_one::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  width: 20px;
+  height: 1px;
+  background-color: #015cad;
+  z-index: 40;
+}
+.suLi_introduce .intro_title p.title_two {
+  font-size: 7rem;
+  font-family: impact;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.1;
+  text-transform: uppercase;
+  top: 5px;
+  left: 50%;
+  margin-left: -244px;
+}
+.suLi_introduce .intro_info {
+  font-size: 1.125rem;
+  color: #dee2e6;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .suLi_introduce .intro_content {
+    width: 1170px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .suLi_introduce .intro_content .view {
+    width: 555px;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+    height: 400px;
+    line-height: 400px;
+  }
+  .suLi_introduce .intro_content .view .intro_img {
+    width: 555px;
+    height: 400px;
+  }
+  .suLi_introduce .intro_content .view .intro_img img {
+    width: 555px;
+    height: 400px;
+  }
+  .suLi_introduce .intro_content .intro_in {
+    flex: 1;
+    background-color: rgba(1, 92, 173, 0.9);
+    padding: 30px;
+    height: 300px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 60px;
+  }
+}
+.suLi_introduce .intro_more {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+.suLi_introduce .intro_more .intro_btn {
+  display: inline-block;
+  margin: 30px auto 0;
+  width: 116px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  background-color: #015cad;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.suLi_introduce .intro_more .intro_btn:hover {
+  text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+  .suLi_introduce {
+    height: 1000px;
+  }
+  .intro_content {
+    width: 690px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro_content .view {
+    width: 690px;
+    height: 400px;
+    text-align: center;
+  }
+  .intro_content .view .intro_img {
+    width: 690px;
+    height: 400px;
+  }
+  .intro_content .view .intro_img img {
+    width: 690px;
+    height: 400px;
+  }
+  .intro_content .intro_in {
+    width: 690px;
+    background-color: rgba(1, 92, 173, 0.9);
+    padding: 30px;
+    height: 250px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 14px;
+  }
+  .intro_more {
+    width: 100%;
+    margin-top: 10px!important;
+    text-align: center;
+  }
+  .intro_more .intro_btn {
+    display: inline-block;
+    margin: 0 auto 0;
+    width: 116px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background-color: #015cad;
+    color: #fff;
+    font-size: 1.4rem;
+  }
+  .intro_more .intro_btn:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,145 @@
+{{extend './_layouts/layout.html'}}
+
+{{block 'title'}}
+<title>苏立科技-关于苏立</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/contact/rec.css">
+<link rel="stylesheet" href="/public/css/contact/contact.css">
+<style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .iw_poi_title {
+        color: #CC5522;
+        font-size: 14px;
+        font-weight: bold;
+        overflow: hidden;
+        padding-right: 13px;
+        white-space: nowrap
+    }
+
+    .iw_poi_content {
+        font: 12px arial, sans-serif;
+        overflow: visible;
+        padding-top: 4px;
+        white-space: -moz-pre-wrap;
+        word-wrap: break-word
+    }
+</style>
+{{/block}}
+
+{{block 'content'}}
+<div class="rec">
+    <div class="sbanner">
+        <img src="/public/img/expRecCon/suliBgi.jpg" id=sbannerImg  alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-1"> 
+                <div class="position-sticky hidden-md hidden-sm hidden-xs" data-spy="affix" data-offset-top="340">
+                    <div class=stickyTitle>
+                        <h3>联系我们</h3>
+                        <div>- Contact Us -</div>
+                    </div>
+                    <div class="stickyContent">
+                        <ul class="list-unstyled">
+                            <li class="li1"><a href="./contact.html">联系方式</a></li>
+                        </ul>
+                    </div>
+                </div>   
+            </div>
+            <div class="col-lg-9 col-2 col-2-ct">
+                <div class="position-sticky2 hidden-lg">
+                    <div class="stickyContent2">
+                        <ul class="list-unstyled">
+                            <li><a href="./contact.html">联系方式</a></li>
+                        </ul>
+                    </div>
+                </div>     
+                <div class="guide hidden-md hidden-sm hidden-xs">
+                    <div class="guiTitle">联系我们</div>
+                    <div class="guiLocation">
+                        <span class="pos">当前位置：</span>
+                        <a href="./contact.html">联系我们</a>
+                    </div>
+                </div>
+                <div  class="body">
+                    <div class="content ct">
+                        <div class="contactus">
+                            <div class="row">
+                            <div id="Telephonist" class="col-lg-6">
+                                    <div class="CompanyName">安徽苏立科技股份有限公司</div>
+                                    <div class="Address">
+                                        <span class="dt">地址<span class="colon">：</span></span>
+                                        <span class="dd">安徽省芜湖市鸠江区中国（安徽）自由贸易试验区芜湖片区永镇路16号</span>
+                                    </div>
+                                    <div class="Hotline">
+                                        <span class="dt">
+                                            <a href="tel:0553-8238688">服务热线</a>
+                                            <span class="colon">：</span>
+                                        </span>
+                                        <span class="dd">0553-8238688</span>
+                                    </div>
+                                    <div class="Tel">
+                                        <span class="dt">
+                                            <a href="tel:0553-8238688">电话</a>
+                                            <span class="colon">：</span>
+                                        </span>
+                                        <span class="dd">0553-8238688</span>
+                                    </div><div class="Fax">
+                                        <span class="dt">
+                                            <a href="tel:0553-8238688">传真</a>
+                                            <span class="colon">：</span>
+                                        </span>
+                                        <span class="dd">0553-8238688</span>
+                                    </div>
+                                    <div class="Mail">
+                                        <span class="dt">邮箱
+                                            <span class="colon">：</span>
+                                        </span>
+                                        <span class="dd">
+                                            <a href="mailto:cqq@sulicn.com">cqq@sulicn.com</a>
+                                        </span>
+                                    </div>
+                                    <div class="Url">
+                                        <span class="dt">网址
+                                            <span class="colon">：</span>
+                                        </span>
+                                        <span class="dd">
+                                            <a href="sulicn.com" target="_blank" class="url">sulicn.com</a>
+                                        </span>
+                                    </div>
+                                    <div class="wechat">
+                                        <div class="dt">微信二维码
+                                            <span class="colon">：</span>
+                                        </div>
+                                        <div class="dd">
+                                            <img src="/public/img/expRecCon/sulicode.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="CompanyOnlineMap" class="col-lg-6">
+                                    <!-- <iframe src="ditu.html" frameborder="0" scrolling=no frameborder=1px height="500px"></iframe> -->
+
+                                    <!--百度地图容器-->
+                                    <div style="width:340px;height:521px;border:#ccc solid 1px;" id="dituContent"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+{{block 'script'}}
+ <!-- 引入百度地图 -->
+ <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+ <script src="/public/js/ditu.js"></script>
+{{/block}}

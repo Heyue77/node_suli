@@ -1,0 +1,208 @@
+body{
+    font-size: 1.4rem;  
+}
+// 背景
+.sbanner{
+    img{
+        max-width: 100%;
+    }
+}
+// 图钉
+.affix{
+    top: 0px;
+    width: 20%;
+}
+.exp{
+    .container{
+        position: relative;
+        // max-width: 1200px;
+        .row{
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+            margin-right: -15px;
+            margin-left: -15px;
+            >div:first-of-type{
+                position: absulte;
+                top: -86px;
+                overflow: hidden;
+                float: right;
+                height:369px;
+                .position-sticky{
+                    position: absulte;
+                    z-index: 100;
+                    background-color: #015CAD;
+                    color: white; 
+                    border-radius: 5px;
+                    text-align: center;
+                    .stickyTitle{
+                        padding: 36px;
+                        height: 115px;
+                        line-height: 115px;
+                        border-bottom: 1px solid white; 
+                        h3{
+                            margin: 0;
+                        }
+                        >div{
+                            line-height: 20px;
+                        }
+                    }
+                    .stickyContent{
+                        ul{
+                            padding-top:5px;
+                            padding-bottom: 5px;
+                            height: 254px;
+    
+                            li{
+                                height: 61px;
+                                line-height: 60px;
+                                background-color: #015CAD;
+                                color: white;
+                                display: block;
+                                &:hover{
+                                    background-color: #F18C00;
+                                    a{
+                                        text-decoration: none;
+                                    }
+                                }
+                                a{
+                                    color: white; 
+                                }
+                            }
+                        }
+                    }
+                }  
+            }
+            >div:last-of-type{
+                overflow: hidden;
+                background-color:white;
+    
+                .guide{
+                    width: 100%;
+                    height: 56px;
+                    border-bottom: 1px dashed #F18C00;
+                    margin-bottom: 30px !important;
+                    .guiTitle{
+                       float: left;
+                        height: 56px;
+                        line-height: 2em;
+                        margin-top: 2px;
+                        box-sizing: border-box;
+                        font-size: 2.4rem;
+                        font-weight: 700;
+                        color: #6c757d;   
+                        border-bottom: 5px solid #F18C00;
+                    }
+                    .guiLocation{
+                        color: #6c757d;
+                        float: right;  
+                        color: #6c757d;
+                        text-align: right;
+                        line-height: 58px;
+                        a{
+                            color: #6c757d;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                .body{
+                    margin-top: 30px;
+                    .content{
+                        width:100%;
+                        height: 100%;
+                        ul{
+                            overflow: hidden;
+                            padding: 0 auto;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                            >li{
+                                overflow: hidden;
+                                float: left;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                                margin-bottom: 10px;
+                                text-align: center;
+                                display: list-item;
+                                >a{
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                >h3{
+                                    >a{
+                                        display: inline-block;
+                                        width: 100%;
+                                        color: #000;
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }   
+                }
+            }
+            .col-2{
+                overflow: hidden;
+                padding-right: 15px;
+                padding-left: 15px;
+                background-color:white;
+                .position-sticky2{
+                    overflow: hidden;
+                    width: 100%;
+                    height: 90px;
+                    .stickyContent2{
+                        width: 100%;
+                        height: 40px;
+                        ul{
+                            width: 100%;
+                            height: 40px;
+                            li{            
+                                text-align: center;             
+                                height: 40px;
+                                line-height: 40px;
+                                display: inline-block; 
+                                margin-bottom: 3px;
+                                background-color: #015CAD;
+                                &:hover{
+                                   background-color: #F18C00;
+                                   a{
+                                       text-decoration: none;
+                                   }
+                                }
+                                a{
+                                    color: white;
+             
+                                }  
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    } 
+    
+}
+
+
+
+
+  @media screen and (min-width: 768px) {
+    .exp>.container {
+      width: 750px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .exp>.container {
+      width: 970px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .exp>.container {
+      width: 1200px;
+    }
+  }
+ 
+
+

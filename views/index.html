@@ -1,0 +1,378 @@
+{{extend './_layouts/layout.html'}}
+
+{{block 'title'}}
+<title>苏立科技-首页</title>
+{{/block}}
+
+{{block 'style'}}
+<!-- 轮播图样式 -->
+<link rel="stylesheet" href="/public/package/swiper-bundle.min.css">
+<link rel="stylesheet" href="/public/css/home/loop.css">
+<!-- 产品展示样式 -->
+<link rel="stylesheet" href="/public/css/home/pro_show.css">
+<!-- 公司介绍样式 -->
+<link rel="stylesheet" href="/public/css/home/intro.css">
+<!-- 实验中心样式 -->
+<link rel="stylesheet" href="/public/css/home/exp.css">
+<!-- 新闻中心样式 -->
+<link rel="stylesheet" href="/public/css/home/news.css">
+<!-- 底部轮播图 -->
+<link rel="stylesheet" href="/public/css/home/btmLoop.css">
+ {{/block}}
+
+{{block 'content'}}
+ <!-- 轮播图 -->
+ <div class="suLi_loop">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/public/img/homeImg/20218414208623.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/public/img/homeImg/202184152250765.jpg" alt="">
+            </div>
+        </div>
+        <!-- 下标 -->
+        <div class="swiper-pagination"></div>
+        <!-- 左右按键 -->
+        <div class="swiper-button-next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <div class="swiper-button-prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+    </div>
+</div>
+
+<!-- 产品展示 -->
+<div class=suLi_pro_show>
+    <div class="container w">
+        <div class="pro_title">
+            <p>产品展示</p>
+            <p>-Product Center-</p>
+        </div>
+        <ul class="pro_content">
+            <li>
+                <a href="#"><img src="./homeImg/pro1.jpg" alt="" class="img-responsive"></a>
+                <a href="#">
+                    <p>清洁热能</p>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="./homeImg/pro2.jpg" alt="" class="img-responsive"></a>
+                <a href="#">
+                    <p>健康电器</p>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="./homeImg/pro3.jpg" alt="" class="img-responsive"></a>
+                <a href="#">
+                    <p>电热部件</p>
+                </a>
+            </li>
+
+        </ul>
+        <div class="pro_more">
+            <a href="#">更多产品</a>
+        </div>
+    </div>
+</div>
+
+<!-- 公司介绍 -->
+<div class="suLi_introduce">
+    <div class="intro_title clearfix">
+        <p class="title_one">公 司 概 况</p>
+        <p class="title_two ">Company Profile</p>
+    </div>
+    <p class="intro_info">我们的诚信、实力和产品质量获得业界的广泛认可</p>
+    <div class="intro_content">
+        <div class="view">
+            <div class="intro_img">
+                <img src="/public/img/homeImg/introImg.jpg" alt="">
+            </div>
+        </div>
+        <div class="intro_in">
+            安徽苏立科技股份有限公司创建于1998年，注册资本12775万元，
+            集团总部位于安徽省芜湖市，占地面积120余亩。苏立科技于2015年新三板上市，
+            积极推进产业结构调整，推进企业IPO。是一家专业从事民用、工业用电热部件、
+            清洁热能装备及健康电器的研发、制造、销售、服务于一体的高新技术企业。<br />
+            公司创始至今历经二十余载，逐步成长为以安徽为中心、覆盖欧亚大陆的集团化企业；
+            旗下拥有十余个分子公司，同时在北京、香港设立办事处。主要生产基地有安徽苏立科技股份有限公司芜湖基地、
+            安徽苏立清洁能源装备有限公司、安徽苏立电气科技有限公司、广东中山金中电热科技有限公司，
+            西安苏立清洁热能技术有限公司，…
+        </div>
+    </div>
+    <div class="intro_more">
+        <a href="#" class="intro_btn">进入详情</a>
+    </div>
+</div>
+
+<!-- 实验中心 -->
+<div class="suLi_experiment">
+    <div class="container">
+        <div class="exp_title">
+            <p class="title_one">实验中心</p>
+            <p class="title_two ">- Experimental Center -</p>
+        </div>
+        <div class="exp_content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp1.jpg" alt="X荧光光谱分析测试仪" class="img-responsive">
+                        </div>
+                        <p>X荧光光谱分析测试仪</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp2.jpg" alt="突跳式限温器寿命试验机" class="img-responsive">
+                        </div>
+                        <p>突跳式限温器寿命试验机</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp3.jpg" alt="万能试验机" class="img-responsive">
+                        </div>
+                        <p>万能试验机</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp4.jpg" alt="布洛维硬度计" class="img-responsive">
+                        </div>
+                        <p>布洛维硬度计</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp5.jpg" alt="光学影像测量仪" class="img-responsive">
+                        </div>
+                        <p>光学影像测量仪</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp6.jpg" alt="金相显微镜" class="img-responsive">
+                        </div>
+                        <p>金相显微镜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="exp_img">
+                            <img src="./homeImg/exp7.jpg" alt="盐雾腐蚀箱" class="img-responsive">
+                        </div>
+                        <p>盐雾腐蚀箱</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 新闻中心 -->
+<div class="siLi_news newsBg">
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./homeImg/news1.jpg" alt="国家工信部第二批专精特新“小巨人”企业">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./homeImg/news2.jpg" alt="国家认可委“CNAS”实验中心">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./homeImg/news3.jpg" alt="安徽省科技进步奖">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./homeImg/news4.jpg" alt="高新技术企业">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="right">
+            <div class="title">
+                <p class="title_one">新闻中心</p>
+                <p class="title_two ">- News Center -</p>
+            </div>
+            <div class="news_content">
+                <div class="news_item clearfix">
+                    <div class="item_left">
+                        <p>28</p>
+                        <p>2021-09</p>
+                    </div>
+                    <div class="item_right">
+                        <a href="#" target="_blank" title="苏立科技荣获安徽省第八届工业设计大赛金奖" class="atext">苏立科技荣获安徽省第八届工业设计大赛金奖
+                        </a>
+                        <p>
+                            安徽省经信厅于2021年9月27日在安徽创新馆举办“安徽省第八届工业设计大赛”颁奖活动，
+                            我司参赛作品“智能消毒干衣柜”荣获本届大赛金奖。…
+                        </p>
+                    </div>
+                </div>
+                <div class="news_item clearfix">
+                    <div class="item_left">
+                        <p>07</p>
+                        <p>2021-09</p>
+                    </div>
+                    <div class="item_right">
+                        <a href="#" target="_blank" title="苏立科技成功认定为“省级工业设计中心”"
+                            class="atext">苏立科技成功认定为“省级工业设计中心”</a>
+                        </a>
+                        <p>
+                            2021年9月6日，安徽省经济和信息化厅官网公布了2021年（第八批）省级工业设计中心拟认定名单，
+                            拟认定155家企业为省级工业设计中心，安徽苏立科技股份有限公司工业…
+                        </p>
+                    </div>
+                </div>
+                <div class="news_item clearfix">
+                    <div class="item_left">
+                        <p>12</p>
+                        <p>2021-08</p>
+                    </div>
+                    <div class="item_right">
+                        <a href="#" target="_blank" title="苏立用“芯”“智”造，市级数字化车间来了！"
+                            class="atext ">苏立用“芯”“智”造，市级数字化车间来了！</a>
+                        </a>
+                        <p>
+                            热烈祝贺安徽苏立科技股份有限公司“水加热管车间”获批“芜湖市数字化车间”荣誉！
+                            2021年7月6日，芜湖市经信局公布2021年市级数字化车间…
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 底部轮播图 -->
+<div class="btm_loop">
+    <div class="container">
+        <div class="wrapper">
+            <div class="boxes">
+                <div class="box "><img src="/public/img/homeImg/btm1.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm2.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm3.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm4.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm5.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm6.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm7.jpg" alt="" class="img-responsive"></div>
+                <div class="box "><img src="/public/img/homeImg/btm8.jpg" alt="" class="img-responsive"></div>
+            </div>
+        </div>
+        <div class="left_btn glyphicon glyphicon-triangle-left"></div>
+        <div class="right_btn glyphicon glyphicon-triangle-right"></div>
+    </div>
+
+</div>
+{{/block}}
+{{block 'script'}}
+ <!-- 轮播图 -->
+ <script src="/public/package/swiper-bundle.min.js"></script>
+ <script>
+     var swiper = new Swiper('.swiper-container', {
+         slidesPerView: 1,
+         spaceBetween: 30,
+         loop: true,
+         pagination: {
+             el: '.swiper-pagination',
+             clickable: true,
+         },
+         navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+         },
+         autoplay: {
+             delay: 3000,
+             pauseOnMouseEnter: true,
+             disableOnInteraction: false,
+         },
+     });
+ </script>
+
+ <!-- 产品展示 -->
+ <script>
+     $(function () {
+         $(".pro_content .img-responsive").mouseover(function () {
+             $(this).animate({ "width": "350px", "height": "175px" }, 400).animate({ "width": "338px", "height": "170px" }, 400)
+         })
+     })
+ </script>
+ <!-- 公司简介 -->
+ <script>
+     $(function () {
+         $(".intro_img>img").mouseover(function () {
+             var width = $(window).width();
+             if (width > 992) {
+                 $(this).animate({ "width": "560px", "height": "410px" }, 400).animate({ "width": "555px", "height": "400px" }, 400);
+             }
+
+         })
+     })
+ </script>
+
+ <!-- 新闻中心标题 -->
+ <script>
+     $(function () {
+         var colorlist = ['#e83e8c', 'yellow', 'red', '#ad013a', '#015CAD'];
+         $(".item_right>.atext").on("mouseover", function () {
+             var count = 0;
+             timer = setInterval(() => {
+                 $(this).css("color", colorlist[count]);
+                 count++;
+             }, 300);
+         })
+         $(".item_right>.atext").on("mouseout", function () {
+             clearInterval(timer);
+             $(this).css("color", "#333");
+         })
+     })
+ </script>
+
+ <!-- 底部轮播图 -->
+ <script src="/public/js/anime.min.js"></script>
+ <script>
+     xTrans = [];
+     anime.set('.box', {
+         translateX: function (el, i, l) {
+             xTrans[i] = { x: i * 170 };
+             return i * 170;
+         },
+     });
+
+     anime({
+         targets: xTrans,
+         duration: 6000, //走一周持续时间
+         easing: 'linear',
+         x: "+=1360",
+         loop: true,
+         update: function (anim) {
+             anime.set('.box', {
+                 translateX: function (el, i, l) {
+                     return xTrans[i].x % 1360
+                 }
+             });
+         }
+     })
+ </script>
+{{/block}}
