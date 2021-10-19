@@ -159,6 +159,12 @@ body {
   height: 100%;
 }
 .pro .container .row > div:last-of-type .body .content ul {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: start;
+  flex-shrink: 1;
   overflow: hidden;
   padding: 0 auto;
   margin-left: -15px;
@@ -166,7 +172,6 @@ body {
 }
 .pro .container .row > div:last-of-type .body .content ul > li {
   overflow: hidden;
-  float: left;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 10px;
@@ -179,7 +184,7 @@ body {
 .pro .container .row > div:last-of-type .body .content ul > li > h3 > a {
   display: inline-block;
   width: 100%;
-  color: #015cad;
+  color: #333;
   font-size: 1.4rem;
 }
 @media (min-width: 768px) {

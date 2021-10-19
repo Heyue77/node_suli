@@ -44,7 +44,7 @@
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-size: 12px;
 	color: #fff;
-	background: url(/public/imgs/features.png) no-repeat #015cad center;
+	background: url(/public/img/features.png) no-repeat #015cad center;
 }
 .bottom .content .container {
 	padding: 30px 0px;

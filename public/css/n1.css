@@ -1,43 +1,41 @@
-.container .affix {
+.n1 .container .affix {
   top: 0;
-  right: 70px;
-  width: 22%;
+  right: 10%;
+  width: 20%;
 }
-.container .td {
+.n1 .container .td {
   float: right;
   margin-top: -5px;
 }
-.container .td .sl_gy {
+.n1 .container .td .sl_gy {
   margin-top: -25px;
   padding: 15px;
-  background-color: #015CAD;
+  background-color: #015cad;
   width: 100%;
   height: 130px;
   color: white;
   border-bottom: 2px solid white;
 }
-.container .td .navp .nav {
+.n1 .container .td .navp .nav {
   top: 0;
   width: 100%;
   line-height: 50px;
 }
-.container .td .navp .nav li a {
+.n1 .container .td .navp .nav li a {
   color: white;
   text-align: center;
-  background-color: #015CAD;
+  background-color: #015cad;
 }
-.container .td .navp .nav li a:hover {
+.n1 .container .td .navp .nav li a:hover {
   background-color: #fd7e14;
 }
-.container .td .navp .nav li .active a,
-.container .td .navp .nav li .active a:hover,
-.container .td .navp .nav li .active a:focus {
+.n1 .container .td .navp .nav li .active {
   background-color: #fd7e14;
 }
-.container .tab-content {
+.n1 .container .tab-content {
   margin-bottom: 50px;
 }
-.container .tab-content .tt {
+.n1 .container .tab-content .tt {
   width: 100%;
   position: relative;
   height: 100px;
@@ -45,21 +43,21 @@
   padding-top: 50px;
   line-height: 44px;
 }
-.container .tab-content .tt .title {
+.n1 .container .tab-content .tt .title {
   float: left;
   font-size: 24px;
   border-bottom: 5px solid #fd7e14;
   margin-bottom: -20px;
 }
-.container .tab-content .tt .adr {
+.n1 .container .tab-content .tt .adr {
   float: right;
   right: 50px;
 }
-.container .tab-content .tt .adr span,
-.container .tab-content .tt .adr a {
+.n1 .container .tab-content .tt .adr span,
+.n1 .container .tab-content .tt .adr a {
   color: #333;
 }
-.container .tab-content .zz .title {
+.n1 .container .tab-content .zz .title {
   display: block;
   text-align: center;
   font-size: 40px;
@@ -67,20 +65,20 @@
   line-height: 1.5em;
   padding: 20px 0;
 }
-.container .tab-content .zz .zn {
+.n1 .container .tab-content .zz .zn {
   color: #ccc;
   text-align: center;
   margin-bottom: 30px;
 }
-.container .tab-content .zz .zn span a {
+.n1 .container .tab-content .zz .zn span a {
   color: #ccc;
 }
-.container .tab-content .zz .zn span a:hover {
-  color: #015CAD;
+.n1 .container .tab-content .zz .zn span a:hover {
+  color: #015cad;
 }
-.container .tab-content .zm {
+.n1 .container .tab-content .zm {
   text-align: center;
 }
-.container .tab-content .zm img {
+.n1 .container .tab-content .zm img {
   width: 100%;
 }

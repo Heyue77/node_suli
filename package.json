@@ -20,12 +20,14 @@
     "art-template": "^4.13.2",
     "body-parser": "^1.19.0",
     "bootstrap": "^3.3.5",
-    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
     "express-session": "^1.17.2",
     "jquery": "^1.9.1",
     "mongoose": "^6.0.11"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "ejs": "^3.1.6"
+  }
 }

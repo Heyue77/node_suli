@@ -119,7 +119,7 @@
             <ul>
                 {{each expResult}}
                 <li>
-                    <a href="/exp/exp2/{{$value._id.toString()}}">
+                    <a href="/exp/{{$value._id.toString()}}">
                         <div class="exp_img">
                             <img src="/public/img/{{$value.img}}" alt="{{$value.name}}" class="img-responsive">
                         </div>
@@ -139,7 +139,7 @@
             <ul>
                 {{each honourResult}}
                 <li>
-                    <a href="/aboutSu/{{$value._id.toString()}}">
+                    <a href="/about/n1/{{$value._id.toString()}}">
                         <img src="{{$value.img}}" alt="{{$value.title}}">
                         <span class="glyphicon glyphicon-eye-open"></span>
                     </a>

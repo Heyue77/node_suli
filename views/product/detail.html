@@ -1,0 +1,72 @@
+{{extend '../_layouts/layout.html'}}
+
+{{block 'title'}}
+<title>产品介绍 - 安徽苏立科技股份有限公司</title>
+{{/block}}
+
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/exp.css">
+<link rel="stylesheet" href="/public/css/exp2.css">
+{{/block}}
+{{block 'content'}}
+<div class="exp">
+    <div class="sbanner">
+        <img src="/public/img/suliBgi.jpg" id=sbannerImg alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="position-sticky hidden-xs" data-spy="affix" data-offset-top="340">
+                    <div class=stickyTitle>
+                        <h3>产品展示</h3>
+                        <div>- Product Center -</div>
+                    </div>
+                    <div class="stickyContent">
+                        <ul class="list-unstyled">
+                            <li class="li1 active"><a href="/product01" class="a1">清洁热能</a></li>
+                            <li class="li2"><a href="/product01" class="a2">健康电器</a></li>
+                            <li class="li3"><a href="/product01" class="a3">电热部件</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="guide">
+                    <div class="guiTitle justify-content-between">清洁能源</div>
+                    <div class="guiLocation">
+                        <span class="pos">当前位置：</span>
+                        <a href="#">产品展示 > > 清洁热能</a>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="content">
+                        <h1 class="Title">{{product.name}}</h1>
+                        <div class="Log">
+                            <span class="publisher">
+                                <d>发布单位：</d>
+                                <a href="sulicn.com">{{product.created_company}}</a>
+                            </span>　
+                            <span class="operator">
+                                <d>发布人：</d>{{product.created_person}}
+                            </span>　
+                            <span class="date">
+                                <d>发布时间：</d>2021/8/4 12:17:52
+                            </span>
+                            <span class="hits">
+                                <d>关注度：</d>238
+                            </span>
+                        </div>
+                        <div class="Picture"><img src="/public/img/{{product.img}}" class="img-responsive center-block">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    {{/block}}
+    {{block 'script'}}{{/block}}
+
+    

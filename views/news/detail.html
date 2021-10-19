@@ -1,0 +1,114 @@
+{{extend '../_layouts/layout.html'}}
+
+{{block 'title'}}
+<title>新闻中心</title>
+{{/block}}
+{{block 'style'}}
+<link rel="stylesheet" href="/public/css/news1.css">
+<link rel="stylesheet" href="/public/css/news11.css">
+{{/block}}
+
+
+{{block 'content'}}
+    <div class="news1">
+        <img src="/public/img/tt.jpg" class="img">
+        <div class="container">
+            <div class="news-box pull-right col-lg-3 col-md-3 hidden-sm hidden-xs" data-spy="affix"
+                data-offset-top="445">
+                <div class="news-center">
+                    新闻中心
+                    <div class="box1">-News Center-</div>
+                </div>
+                <div class="news-body">
+                    <div class="box2 active">
+                        <a href="./news1.html">公司动态</a>
+                        <div class="box3">
+                            <a href="./news1.html">公司动态</a>
+                            <div class="arrow1"></div>
+                        </div>
+                    </div>
+                    <div class="box21 ">
+                        <a href="./news2.html">行业新闻</a>
+                        <div class="box4">
+                            <a href="./news2.html">行业新闻</a>
+                            <div class="arrow2"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="news-btn  hidden-lg hidden-md">
+                <button class="btn pull-left "><a href="./news1.html">公司动态</a></button>
+                <button class="btn pull-left "><a href="./news2.html">行业新闻</a></button>
+            </div>
+            <div class="header col-lg-9 col-md-9 hidden-sm hidden-xs">
+                <div class="title pull-left  ">
+                    公司动态
+                </div>
+                <div class="address pull-right  ">
+                    <span>当前位置：</span>
+                    <span><a href="#">新闻中心</a></span>
+                    <span>>></span>
+                    <span><a href="./news1.html"> 公司动态</a></span>
+                </div>
+            </div>
+            <div class="title text-center col-lg-9 col-md-9 col-sm-11 col-xs-11">
+                {{news.title}}
+            </div>
+            <div class="text-center intro col-lg-9 col-md-9  col-sm-11 col-xs-11">
+                <span class="firm">
+                    发布单位
+                    <a href="sulicn.com">{{news.created_company}}</a>
+                </span>
+                <span class="person">发布人：{{news.created_person}}</span>
+                <span class="time">发布时间：2021/9/28 13:53:52</span>
+                <span class="attention">关注度：48</span>
+
+            </div>
+
+            <div class="details col-lg-9 col-md-9 col-sm-11 col-xs-11">
+                <p>{{news.content[0]}}</p>
+                <img src="/public/img/{{news.img[0]}}" class="img-responsive">
+                <p>{{news.content[1]}}</p>
+                <br />
+                <p>{{news.content[2]}}</p>
+                <img src="/public/img/{{news.img[1]}}" class="img-responsive">
+                <p>{{news.content[3]}}</p>
+                <br />
+                <p>{{news.content[4]}}</p> 
+            </div>
+
+        </div>
+    </div>
+    {{/block}}
+    {{block 'script'}}
+    <script>
+        $(function () {
+            if($(".details>img").attr("src")=="/public/img/news/"){
+                $(".details>img").css("display","none");
+            }
+            else{
+                $(".details>img").css("display","block");
+            }
+            $(".box21").mouseover(function () {
+                // console.log(111);
+                // $(".box21").removeClass("avtive")
+                $(".box2").css("backgroundColor", "rgb(1, 92, 173)")
+            })
+            $(".box21").mouseleave(function () {
+                // console.log(111);
+                // $(".box21").removeClass("avtive")
+                $(".box2").css("backgroundColor", "rgb(241, 140, 0)")
+            })
+            $(".dropdown-menu>.li2").mouseover(function () {
+                $(".dropdown-menu>.li1").removeClass("active")
+                $(".dropdown-menu>.li2").addClass("active")
+            })
+            $(".dropdown-menu>.li1").mouseover(function () {
+                $(".dropdown-menu>.li2").removeClass("active")
+                $(".dropdown-menu>.li1").addClass("active")
+            })
+        })
+    </script>
+    {{/block}}
