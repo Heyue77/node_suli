@@ -18,14 +18,14 @@
             <div class="col-lg-3">
                 <div class="position-sticky hidden-xs" data-spy="affix" data-offset-top="340">
                     <div class=stickyTitle>
-                        <h3>产品展示</h3>
+                        <h3>{{product_class.name}}</h3>
                         <div>- Product Center -</div>
-                    </div>
+                    </div>   
                     <div class="stickyContent">
                         <ul class="list-unstyled">
-                            <li class="li1 active"><a href="pro01.html" class="a1">清洁热能</a></li>
-                            <li class="li2"><a href="pro01.html" class="a2">健康电器</a></li>
-                            <li class="li3"><a href="pro01.html" class="a3">电热部件</a></li>
+                            <li class="li1{{product.category==1?' active':''}}"><a href="/product01" class="a1">清洁热能</a></li>
+                            <li class="li2{{product.category==2?' active':''}}"><a href="/product02" class="a2">健康电器</a></li>
+                            <li class="li3{{product.category==3?' active':''}}"><a href="/product03" class="a3">电热部件</a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,111 +33,24 @@
 
             <div class="col-lg-9 mt-5 mt-lg-0">
                 <div class="guide">
-                    <div class="guiTitle justify-content-between">产品介绍</div>
+                    <div class="guiTitle justify-content-between">{{product_class.name}}</div>
                     <div class="guiLocation">
-                        <span class="pos">当前位置:</span>
-                        <a href="pro.html">产品展示</a>
+                        <span class="pos">当前位置: {{product_class.name}}</span>    
                     </div>
                 </div>
                 <div class="body">
                     <div class="content col-md-4 col-xs-6">
                         <ul class="list-unstyled">
+                            {{each product}}
                             <li>
-                                <a href="pro01-1.html">
-                                    <img src="img/pro.01.jpg">
+                                <a href="/product/{{$value._id.toString()}}">
+                                    <img src="/public/img/{{$value.img}}">
                                 </a>
                                 <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">智能消毒干衣柜</a>
+                                    <a href="#" targrt="_blank">{{$value.name}}</a>
                                 </h3>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.02.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">多功能网红锅</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.03.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">空气源热泵热风机</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.04.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">蓄热机组系列</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.05.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">蓄热式电暖器</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.06.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.07.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.08.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.09.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.10.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.11.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/pro.12.jpg">
-                                </a>
-                                <h3 class="contTitle">
-                                    <a href="#" targrt="_blank">压铸加热器及配件</a>
-                                </h3>
-                            </li>
+                            {{/each}}
                         </ul>
                     </div>
                 </div>
@@ -147,4 +60,12 @@
 </div>
 
 {{/block}}
-{{block 'script'}}{{/block}}
+{{block 'script'}}
+<script>
+// $(function(){
+//     $(".stickyContent>ul>li").click(function(){
+//          $(".stickyTitle>h3").innerhtml= $(".stickyContent>ul>li>a").html();   
+//     })
+// })
+</script>  
+{{/block}}

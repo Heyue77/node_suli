@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
-var equipmentSchema=new mongoose.Schema({
+var productSchema=new mongoose.Schema({
     name:String,
     img:{
-        type:String,
-        defalut:"/public/img/expRecCon/01-x荧光光谱分析测试仪.jpg",
+        type:String
     },
+    category:Number,
     created_person:{
         type:String,
-        defalut:"安徽苏立科技",
+        defalut:"操作员",
     },
     created_company:{
         type:String,
@@ -23,5 +23,5 @@ var equipmentSchema=new mongoose.Schema({
     },   
 });
 
-var Equipment=mongoose.model("Equipment",equipmentSchema);
-module.exports=Equipment;
+var Product=mongoose.model("Product",productSchema);
+module.exports=Product;

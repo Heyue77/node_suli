@@ -1,11 +1,10 @@
 const express = require("express");
-const router = require("./router");
+const router = require("./router/index");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const expressSession = require("express-session");
 const app = express();
-const ejs = require('ejs');
-app.engine('ejs',ejs.renderFile);
+
 // 配置public,node_modules为静态资源
 app.use("/node_modules", express.static("./node_modules"));
 app.use("/public", express.static("./public"));
@@ -19,7 +18,7 @@ app.engine("html", require("express-art-template"));
 app.set("views", __dirname + "/views");
 
 // 连接mongoose
-mongoose.connect("mongodb://localhost:27017/suli");
+mongoose.connect("mongodb://localhost:27017/suLi");
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
@@ -39,10 +38,6 @@ app.use(
 		}
 	})
 );
-//配置ejs
-app.set('views','views');//可以省略。默认
-app.set('view engine','ejs');
-
 app.use("/", router);
 
 app.listen(8000, () => {

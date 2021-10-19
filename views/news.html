@@ -51,19 +51,22 @@
         </div>
         <div class="content col-lg-9 col-md-9 col-sm-11 col-xs-11">
             <ul>
+                {{each news}}
                 <li>
                     <div class="pull-left date text-center">
                         <h3>28</h3>
                         <h5>2021-09</h5>
                     </div>
                     <div class=" event">
-                        <div class="title"><a href="./news11.html">苏立科技荣获安徽省第八届工业设计大赛金奖</a></div>
+                        <div class="title"><a href="/news/{{$value._id.toString()}}">{{$value.title}}</a></div>
                         <div>
-                            安徽省经信厅于2021年9月27日在安徽创新馆举办“安徽省第八届工业设计大赛”颁奖活动，我司参赛作品“智能消毒干衣柜”荣获本届大赛金奖。
+                            {{$value.content[0]}}
                         </div>
                     </div>
                 </li>
-                <li>
+                {{/each}}
+
+                <!-- <li>
                     <div class="pull-left date text-center">
                         <h3>07</h3>
                         <h5>2021-09</h5>
@@ -194,7 +197,7 @@
                             为全面总结2020年度集团经营状况，部署2021年经营任务，苏立集团“倡实干、铸转型、谱新篇、创辉煌 ”经营管理年会于1月30日准时召开。苏立科技集团董事长孔炜、总经…
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
