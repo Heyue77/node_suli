@@ -1,0 +1,47 @@
+{{extend '../_layouts/layout.html'}} {{block 'title'}}
+<title>资质荣誉</title>
+{{/block}} {{block 'style'}}
+<style>
+
+</style>
+<link rel="stylesheet" href="../../public/css/n1.css"> {{/block}} {{block 'content'}}
+<img src="../../public/img/tt.jpg" alt="" style="width:100%;position: relative;top:-20px;z-index:-1">
+<div class="container">
+    <div class="row">
+        <div class="td col-lg-3 col-md-3 hidden-sm hidden-xs right" data-spy="affix" data-offset-top="400 ">
+            <div class="sl_gy text-center hidden-sm hidden-xs">
+                <h3>关于苏立</h3>
+                <p>- About Su Li -</p>
+            </div>
+            <div class="navp">
+                <ul class="nav hidden-xs hidden-sm">
+                    <li class="active">
+                        <a href="/aboutSu">公司概况</a></li>
+                    <li><a href="/s2">企业文化</a></li>
+                    <li><a href="/s3">资质荣誉</a></li>
+                    <li><a href="/s4">发展历程</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content col-lg-9 col-md-9 left">
+            <div class="tt">
+                <div class="title">资质荣誉</div>
+                <div class="adr"><span class="pos">当前位置：</span><a href=?mid=2>关于苏立</a> >> <a href=?mid=7>资质荣誉</a></div>
+            </div>
+            <div class="zz">
+                <h1 class="title text-center">{{honour.title}}</h1>
+                <div class="zn">
+                    <span>发布单位:<a>{{honour.created_company}}</a></span>&nbsp;&nbsp;
+                    <span>发布人:{{honour.created_person}}</span>&nbsp;&nbsp;
+                    <span>发布时间：{{honour.created_time.toLocaleString()}} </span>&nbsp;&nbsp;
+                    <span>关注度：{{honour.view_num}}</span>
+                </div>
+                <div class="zm">
+                    <img src="../{{honour.img}}" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}} {{block 'script'}} {{/block}}
