@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
 });
 //关于苏立部分开始
 router.get("/about", (req, res) => {
-	res.render("aboutSu.html");
+	res.render("about.html");
 });
 router.get("/s2", (req, res) => {
 	res.render("s2.html");
