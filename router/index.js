@@ -46,7 +46,7 @@ router.get("/product", (req, res) => {
 //新闻部分开始
 router.get("/news", async (req, res) => {
     let result = await News.find().sort({ id: 1 });
-    console.log(result)
+    // console.log(result)
     res.render("news.html", { result });
 })
 router.get("/news/tradeNews", (req, res) => {
@@ -54,10 +54,10 @@ router.get("/news/tradeNews", (req, res) => {
 })
 router.get("/news/template/:id", async (req, res) => {
     var id = req.params["id"]
-    console.log(id);
+    // console.log(id);
     res.type('html');
     let result = await News.findById(id);
-    console.log(result)
+    // console.log(result)
     res.render("news/template.html", { result });
     return;
 

@@ -1,9 +1,20 @@
 {{extend './_layouts/layout.html'}} {{block 'title'}}
 <title>关于苏立</title>
 {{/block}} {{block 'style'}}
-<link rel="stylesheet" href="../public/css/pro.css"> {{/block}} {{block 'content'}}
+<link rel="stylesheet" href="/public/css/pro.css">
+<style>
+    .affix {
+        top: 0px;
+        right: calc(20vh);
+        background-color: #015cad !important;
+        width: 265px;
+        padding: 0;
+    }
+</style>
+{{/block}}
+{{block 'content'}}
 <div class="d">
-    <img src="../public/img/tt.jpg" alt="" style="width:100%;position: relative;top:-20px;z-index:-1">
+    <img src="/public/img/tt.jpg" alt="" style="width:100%;position: relative;top:-20px;z-index:-1">
     <div class="container">
         <div class="row">
             <div class="td col-lg-3 col-md-3 hidden-sm hidden-xs right" data-spy="affix" data-offset-top="500 ">
@@ -14,10 +25,11 @@
                 <div class="navp">
                     <ul class="nav hidden-xs hidden-sm">
                         <li class="active">
-                            <a href="aboutSu">公司概况</a></li>
-                        <li><a href="s2">企业文化</a></li>
-                        <li><a href="s3">资质荣誉</a></li>
-                        <li><a href="s4">发展历程</a></li>
+                            <a href="/aboutSu">公司概况</a>
+                        </li>
+                        <li><a href="/s2">企业文化</a></li>
+                        <li><a href="/s3">资质荣誉</a></li>
+                        <li><a href="/s4">发展历程</a></li>
                     </ul>
                 </div>
             </div>
@@ -25,7 +37,8 @@
                 <div class="tab-pane active">
                     <div class="tt">
                         <div class="title">企业文化</div>
-                        <div class="adr"><span class="pos">当前位置：</span><a href=?mid=2>关于苏立</a> >> <a href=?mid=7>企业文化</a></div>
+                        <div class="adr"><span class="pos">当前位置：</span><a href=?mid=2>关于苏立</a> >> <a
+                                href=?mid=7>企业文化</a></div>
                     </div>
                     <div class="whn">
                         <br />
@@ -52,4 +65,5 @@
             </div>
         </div>
     </div>
-    {{/block}} {{block 'script'}} {{/block}}
+</div>
+{{/block}} {{block 'script'}} {{/block}}

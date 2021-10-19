@@ -1,128 +1,114 @@
-    .container {
-        .affix{
-            top: 0;
-            right: 140px;
-            background-color: #015CAD!important;
-            width: 18%;
-            padding: 0;
-            @media screen and (min-width:920px){
-                top:0;
-                right:80px;
-                width:20%;
-            }
-        }
-        .td {
-            float: right;
+.d {
+	.container {
+		.td {
+			float: right;
+			margin-top: -20px;
+			.sl_gy {
+				margin-top: -5px;
+				padding: 15px;
+				background-color: #015cad;
+				width: 100%;
+				height: 130px;
+				color: white;
+				border-bottom: 2px solid white;
+			}
 
-            .sl_gy {
-                margin-top      : -25px;
-                padding         : 15px;
-                background-color: #015CAD;
-                width           : 100%;
-                height          : 130px;
-                color           : white;
-                border-bottom   : 2px solid white;
-            }
+			.navp {
+				.nav {
+					top: 0;
+					// width      : 100%;
+					line-height: 50px;
+					padding: 0;
+					li {
+						padding: 0;
+						a {
+							color: white;
+							text-align: center;
+							background-color: #015cad;
 
-            .navp {
-                .nav {
-                    top           : 0;
-                    // width      : 100%;
-                    line-height   : 50px;
-                    padding       : 0;
+							&:hover {
+								background-color: #fd7e14;
+							}
+						}
 
-                    li {
-                        padding: 0;
+						&.active {
+							background-color: #fd7e14;
+							a,
+							a:hover,
+							a:focus {
+								background-color: #fd7e14;
+							}
+						}
+					}
+				}
+			}
+		}
 
-                        a {
-                            color           : white;
-                            text-align      : center;
-                            background-color: #015CAD;
+		.tab-content {
+			.tt {
+				width: 100%;
 
-                            &:hover {
-                                background-color: #fd7e14;
+				position: relative;
+				height: 150px;
+				border-bottom: 1px dashed #fd7e14;
+				margin-bottom: 40px;
+				padding-top: 100px;
+				line-height: 44px;
 
-                            }
+				.title {
+					float: left;
+					font-size: 24px;
+					border-bottom: 5px solid #fd7e14;
+					margin-bottom: -20px;
+				}
 
-                        }
+				.adr {
+					float: right;
+					right: 50px;
 
-                        .active {
+					span,
+					a {
+						color: #333;
+					}
+				}
+			}
 
-                            a,
-                            a:hover,
-                            a:focus {
-                                background-color: #fd7e14;
+			.pit {
+				margin-bottom: 20px;
+			}
 
-                            }
+			.zz {
+				display: flex;
+				flex: 1;
+				align-items: center;
+				flex-flow: row wrap;
+				justify-content: start;
+				flex-shrink: 1;
+				width: 100%;
+				a {
+					width: 260px;
+					height:183px;
+					margin: 0 11px 62px;
+					img {
+						width: 260px;
+						height:183px;
+					}
 
+					p {
+						height: 40px;
+						line-height: 25px;
+						padding: 10px 0;
+						text-align: center;
+						color: #333;
+						text-decoration: none;
 
-                        }
-                    }
-
-                }
-            }
-
-        }
-
-        .tab-content {
-            margin-bottom: 50px;
-            .tt {
-                width: 100%;
-
-                position        : relative;
-                height          : 100px;
-                border-bottom   : 1px dashed #fd7e14;
-                // margin-bottom: 40px;
-                padding-top     : 50px;
-                line-height     : 44px;
-
-                .title {
-                    float        : left;
-                    font-size    : 24px;
-                    border-bottom: 5px solid #fd7e14;
-                    margin-bottom: -20px;
-                }
-
-                .adr {
-                    float: right;
-                    right: 50px;
-
-                    span,
-                    a {
-                        color: #333;
-                    }
-                }
-            }
-
-            .pit {
-                margin-bottom: 20px;
-            }
-
-            .zz {
-                margin-top: 20px;
-                width     : 100%;
-
-                a {
-                    float: left;
-
-                    img {
-                        width: 100%;
-                    }
-
-                    p {
-                        height            : 30px;
-                        line-height       : 30px;
-                        // padding        : 10px 0;
-                        text-align        : center;
-                        color             : #333;
-                        text-decoration   : none;
-
-                        &:hover {
-                            color          : #015CAD;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+						&:hover {
+							color: 015cad;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
