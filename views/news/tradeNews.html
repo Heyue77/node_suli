@@ -1,11 +1,13 @@
-{{extend './_layouts/layout.html'}}
+{{extend '../_layouts/layout.html'}}
 
 {{block 'title'}}
-<title>苏立科技-关于苏立</title>
+<title>苏立科技-行业新闻</title>
 {{/block}}
+
 
 {{block 'style'}}
 <link rel="stylesheet" href="/public/css/news1.css">
+<link rel="stylesheet" href="/public/css/news2.css">
 {{/block}}
 
 {{block 'content'}}
@@ -18,14 +20,14 @@
                 <div class="box1">-News Center-</div>
             </div>
             <div class="news-body">
-                <div class="box2 active">
+                <div class="box2 ">
                     <a href="/news">公司动态</a>
                     <div class="box3">
                         <a href="/news">公司动态</a>
                         <div class="arrow1"></div>
                     </div>
                 </div>
-                <div class="box21">
+                <div class="box21 active">
                     <a href="/news/tradeNews">行业新闻</a>
                     <div class="box4">
                         <a href="/news/tradeNews">行业新闻</a>
@@ -33,58 +35,45 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="news-btn  hidden-lg hidden-md">
             <button class="btn pull-left "><a href="/news">公司动态</a></button>
             <button class="btn pull-left "><a href="/news/tradeNews">行业新闻</a></button>
         </div>
         <div class="header col-lg-9 col-md-9 hidden-sm hidden-xs">
-            <div class="title pull-left">
-                公司动态
+            <div class="title pull-left  ">
+                行业新闻
             </div>
-            <div class="address pull-right">
+            <div class="address pull-right  ">
                 <span>当前位置：</span>
                 <span><a href="/news">新闻中心</a></span>
                 <span>>></span>
-                <span><a href="/news">公司动态</a></span>
+                <span><a href="/news/tradeNews"> 行业新闻</a></span>
             </div>
         </div>
-        <div class="content col-lg-9 col-md-9 col-sm-11 col-xs-11">
-            <ul>
-                {{each result}}
-                <li>
-                    <div class="pull-left date text-center">
-                        <h3>{{$value.created_time.getDate()}}</h3>
-                        <h5>{{$value.created_time.toString().slice(11,15)}}-0{{$value.created_time.getMonth()+1}}
-                        </h5>
-                    </div>
-                    <div class=" event">
-                        <div class="title"><a href="/news/template/{{$value._id.toString()}}">{{$value.title}}</a>
-                        </div>
-                        <div>
-                            {{$value.paragraph}}
-                        </div>
-                    </div>
-                </li>
-                {{/each}}
-            </ul>
+        <div class="box">
+            <div>温馨提示：您尚未发布文章，文章充实后，界面更美观。</div>
+            <div>操作指南：请登陆后台，录入图文信息。</div>
         </div>
     </div>
 </div>
 
 {{/block}}
+
 {{block 'script'}}
 <script>
     $(function () {
-        $(".box21").mouseover(function () {
+        $(".box2").mouseover(function () {
             // console.log(111);
             // $(".box21").removeClass("avtive")
-            $(".box2").css("backgroundColor", "rgb(1, 92, 173)")
+            $(".box21").css("backgroundColor", "rgb(1, 92, 173)")
         })
-        $(".box21").mouseleave(function () {
+        $(".box2").mouseleave(function () {
             // console.log(111);
             // $(".box21").removeClass("avtive")
-            $(".box2").css("backgroundColor", "rgb(241, 140, 0)")
+            $(".box21").css("backgroundColor", "rgb(241, 140, 0)")
         })
         $(".dropdown-menu>.li2").mouseover(function () {
             $(".dropdown-menu>.li1").removeClass("active")

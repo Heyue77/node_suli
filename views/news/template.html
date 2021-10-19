@@ -1,18 +1,18 @@
-{{extend './_layouts/layout.html'}}
-
+{{extend '../_layouts/layout.html'}}
 {{block 'title'}}
-<title>苏立科技-关于苏立</title>
+<title>苏立科技-公司动态</title>
 {{/block}}
-
 {{block 'style'}}
 <link rel="stylesheet" href="/public/css/news1.css">
+<link rel="stylesheet" href="/public/css/news11.css">
 {{/block}}
+
 
 {{block 'content'}}
 <div class="news1">
     <img src="/public/img/tt.jpg" class="img">
     <div class="container">
-        <div class="news-box pull-right col-lg-3 col-md-3 hidden-sm hidden-xs" data-spy="affix" data-offset-top="125">
+        <div class="news-box pull-right col-lg-3 col-md-3 hidden-sm hidden-xs" data-spy="affix" data-offset-top="445">
             <div class="news-center">
                 新闻中心
                 <div class="box1">-News Center-</div>
@@ -25,7 +25,7 @@
                         <div class="arrow1"></div>
                     </div>
                 </div>
-                <div class="box21">
+                <div class="box21 ">
                     <a href="/news/tradeNews">行业新闻</a>
                     <div class="box4">
                         <a href="/news/tradeNews">行业新闻</a>
@@ -33,46 +33,49 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="news-btn  hidden-lg hidden-md">
             <button class="btn pull-left "><a href="/news">公司动态</a></button>
             <button class="btn pull-left "><a href="/news/tradeNews">行业新闻</a></button>
         </div>
         <div class="header col-lg-9 col-md-9 hidden-sm hidden-xs">
-            <div class="title pull-left">
+            <div class="title pull-left  ">
                 公司动态
             </div>
-            <div class="address pull-right">
+            <div class="address pull-right  ">
                 <span>当前位置：</span>
                 <span><a href="/news">新闻中心</a></span>
                 <span>>></span>
-                <span><a href="/news">公司动态</a></span>
+                <span><a href="/news/news"> 公司动态</a></span>
             </div>
         </div>
-        <div class="content col-lg-9 col-md-9 col-sm-11 col-xs-11">
-            <ul>
-                {{each result}}
-                <li>
-                    <div class="pull-left date text-center">
-                        <h3>{{$value.created_time.getDate()}}</h3>
-                        <h5>{{$value.created_time.toString().slice(11,15)}}-0{{$value.created_time.getMonth()+1}}
-                        </h5>
-                    </div>
-                    <div class=" event">
-                        <div class="title"><a href="/news/template/{{$value._id.toString()}}">{{$value.title}}</a>
-                        </div>
-                        <div>
-                            {{$value.paragraph}}
-                        </div>
-                    </div>
-                </li>
-                {{/each}}
-            </ul>
+
+
+
+        <div class="title text-center col-lg-9 col-md-9 col-sm-11 col-xs-11">
+            {{result.title}}
         </div>
+        <div class="text-center intro col-lg-9 col-md-9  col-sm-11 col-xs-11">
+            <span class="firm">
+                发布单位
+                <a href="sulicn.com">安徽苏立科技股份有限公司</a>
+            </span>
+            <span class="person">发布人：安徽苏立科技</span>
+            <span class="time">发布时间：{{result.created_time.toLocaleString()}}</span>
+            <span class="attention">关注度：{{result.attention}}</span>
+
+        </div>
+
+        <%- result.content%>
+
     </div>
 </div>
 
 {{/block}}
+
+
 {{block 'script'}}
 <script>
     $(function () {

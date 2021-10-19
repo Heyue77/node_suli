@@ -44,14 +44,23 @@ router.get("/product", (req, res) => {
 //产品部分结束
 
 //新闻部分开始
-router.get("/news", (req, res) => {
-	res.render("news.html");
-});
-router.get("/news/news12", async (req, res) => {
-	res.type("html");
-	var result = await News.find();
-	res.render("news/news12.html", { result });
-	return;
+router.get("/news", async (req, res) => {
+    let result = await News.find().sort({ id: 1 });
+    console.log(result)
+    res.render("news.html", { result });
+})
+router.get("/news/tradeNews", (req, res) => {
+    res.render("news/tradeNews.html")
+})
+router.get("/news/template/:id", async (req, res) => {
+    var id = req.params["id"]
+    console.log(id);
+    res.type('html');
+    let result = await News.findById(id);
+    console.log(result)
+    res.render("news/template.html", { result });
+    return;
+
 });
 //新闻部分结束
 
@@ -71,6 +80,7 @@ router.get("/recruit", (req, res) => {
 router.get("/contact", (req, res) => {
 	res.render("contact.html");
 });
+
 //联系部分结束
 
 module.exports = router;
