@@ -1,9 +1,0 @@
-{"title":"国家工信部第二批专精特新'小巨人'企业","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/aboutSu/juren.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":374}
-{"title":"国家认可委'CNAS'实验中心","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/zk.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":276}
-{"title":"安徽省科技进步奖","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/jb.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":276}
-{"title":"高新技术企业","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/gx.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":276}
-{"title":"天津市蓟州区'煤改电'项目突出贡献企业","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/tc.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":276}
-{"title":"安徽省芜湖市上市企业协会-第一届理事会会员单位","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/hy.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":374}
-{"title":"博士后科研工作站","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/bz.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":374}
-{"title":"中国科学院先进热控材料联合研究中心","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/xj.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":374}
-{"title":"安徽省认定企业技术","created_person":"安徽苏立科技","created_company":"安徽苏立科技股份有限公司","img":"../../public/img/rd.jpg","created_time" : ISODate("2021-10-18T20:07:21.000+08:00"),"view_num":374}

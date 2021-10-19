@@ -12,88 +12,21 @@ router.get("/", (req, res) => {
 router.get("/aboutSu", (req, res) => {
     res.render("aboutSu.html");
 })
-router.get("/views?/s1.html?", (req, res) => {
-    res.render("s1.html")
-})
-router.get("/views?/s2.html?", (req, res) => {
+router.get("/s2", (req, res) => {
     res.render("s2.html")
 })
-router.get("/views?/s3.html?", (req, res) => {
-    res.render("s3.html")
+router.get("/s3", async(req, res) => {
+    const result = await Honour.find();
+    // console.log(result);
+    res.render("s3.html", { result })
 })
-router.get("/views?/s4.html?", (req, res) => {
+router.get("/s4", (req, res) => {
     res.render("s4.html")
 })
-router.get("/about/n1.html?", async(req, res) => {
-
-    const id = req.params['id']
-    const result = await Honour.find(id)
-    res.render("about/n1.html", { honour: result[0] })
-
-})
-
-router.get("/about/n2.html?", async(req, res) => {
-
-    const id = req.params['id']
-    const result = await Honour.find(id)
-    res.render("about/n2.html", { honour: result[3] })
-
-})
-
-router.get("/about/n3.html?", async(req, res) => {
-
-    const id = req.params['id']
-    const result = await Honour.find(id)
-    res.render("about/n3.html", { honour: result[7] })
-
-})
-
-router.get("/about/n4.html?", async(req, res) => {
-
-    const id = req.params['id']
-    const result = await Honour.find(id)
-    res.render("about/n4.html", { honour: result[6] })
-
-})
-
-router.get("/about/n5.html?", async(req, res) => {
-
-    const id = req.params['id']
-    const result = await Honour.find(id)
-    res.render("about/n5.html", { honour: result[2] })
-
-})
-
-router.get("/about/n6.html?", async(req, res) => {
-
-    var id = req.params['id']
-    var result = await Honour.find(id)
-    res.render("about/n6.html", { honour: result[1] })
-
-})
-
-router.get("/about/n7.html?", async(req, res) => {
-
-    var id = req.params['id']
-    var result = await Honour.find(id)
-    res.render("about/n7.html", { honour: result[8] })
-
-})
-
-
-router.get("/about/n8.html?", async(req, res) => {
-
-    var id = req.params['id']
-    var result = await Honour.find(id)
-    res.render("about/n8.html", { honour: result[5] })
-
-})
-
-router.get("/about/n9.html?", async(req, res) => {
-
-        var id = req.params['id']
-        var result = await Honour.find(id)
-        res.render("about/n9.html", { honour: result[4] })
+router.get("/about/n1/:id", async(req, res) => {
+        const id = req.params['id']
+        const result = await Honour.findById(id);
+        res.render("about/n1.html", { honour: result })
 
     })
     //关于苏立部分结束

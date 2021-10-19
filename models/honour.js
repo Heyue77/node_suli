@@ -15,7 +15,7 @@ var honourScheme = new mongoose.Schema({
     },
     created_time: {
         type: Date,
-        default: "2021/8/4 15:57:07",
+        default: Date.now,
     },
     view_num: {
         type: Number,

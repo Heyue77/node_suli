@@ -17,10 +17,10 @@
                 <div class="navp">
                     <ul class="nav hidden-xs hidden-sm">
                         <li class="active">
-                            <a href="s1.html">公司概况</a></li>
-                        <li><a href="s2.html">企业文化</a></li>
-                        <li><a href="s3.html">资质荣誉</a></li>
-                        <li><a href="s4.html">发展历程</a></li>
+                            <a href="aboutSu">公司概况</a></li>
+                        <li><a href="s2">企业文化</a></li>
+                        <li><a href="s3">资质荣誉</a></li>
+                        <li><a href="s4">发展历程</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,11 +31,13 @@
                         <div class="adr"><span class="pos">当前位置：</span><a href=?mid=2>关于苏立</a> >> <a href=?mid=7>资质荣誉</a></div>
                     </div>
                     <div class="zz">
-                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="./about/n1.html" action="./about/n1.html">
-                            <img src="../public/img/juren.jpg" alt="">
-                            <p class="title" style="overflow: hidden;">国家工信部第二批专精特新”小巨人“企业</p>
+                        {{each result}}
+                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n1/{{$value._id.toString()}}" action="./about/n1.html">
+                            <img src="{{$value.img}}" alt="">
+                            <p class="title" style="overflow: hidden;">{{$value.title}}</p>
                         </a>
-                        <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="./about/n2.html" action="./about/n2.html">
+                        {{/each}}
+                        <!-- <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="./about/n2.html" action="./about/n2.html">
                             <img src="../public/img/renke.jpg" alt="">
                             <p>国家认可委"CNAS"实验中心</p>
                         </a>
@@ -66,35 +68,11 @@
                         <a class="col-xs-6 col-lg-4 col-md-4 col-sm-4" href="/about/n9.html">
                             <img src="../public/img/zhongxin.jpg" alt="">
                             <p>安徽省认定企业技术</p>
-                        </a>
+                        </a> -->
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{/block}} {{block 'script'}}
-    <script>
-        $(a).click.function(() => {
-            $.ajax({
-                url: "http://localhost:8000/about/:id",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(HonoursData),
-                success: function(data) {
-                    console.log("成功", data)
-                    if (data.code === 20000) {
-                        alert(data.msg)
-                        window.location.href = "/logout"
-                    } else if (data.code === 19999) {
-                        alert(data.err)
-                        $("#modify_form")[0].reset()
-                    }
-                },
-                error: function(err) {
-                    console.log("失败", err)
-                }
-            })
-        })
-    </script>
-    {{/block}}
+    {{/block}} {{block 'script'}} {{/block}}
