@@ -46,7 +46,7 @@
   }
 }
 @media screen and (max-width: 992px) {
-  .content {
+  .rec .content {
     height: 1140px !important;
   }
   .col-2 {

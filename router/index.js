@@ -113,8 +113,16 @@ router.get("/exp", async (req, res) => {
 
 // 实验中心二级详情页开始
 router.get("/exp/:id", async (req, res) => {
+    var url=req.originalUrl;
+    // console.log(url);  /exp/616d63d998b65a1f54b9ff6d
     var id = req.params["id"];
     var result = await Equipment.findById(id);
+    // 更新关注度
+    var update=  await Equipment.findByIdAndUpdate(
+        id,
+        { $inc: { view_num: 2 } },
+        { new: true }
+     );
     res.render("exp/detail.html", { equipment: result });
 });
 // 实验中心二级详情页结束

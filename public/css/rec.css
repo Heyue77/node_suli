@@ -56,8 +56,8 @@ body {
   color: white;
   display: block;
 }
-.rec > .container .row .col-1 .position-sticky .stickyContent ul li.active {
-  background-color: #F18C00;
+.rec > .container .row .col-1 .position-sticky .stickyContent ul li.on {
+  background-color: #F18C00 !important;
 }
 .rec > .container .row .col-1 .position-sticky .stickyContent ul li:hover {
   background-color: #F18C00;
