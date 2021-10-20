@@ -42,110 +42,125 @@ router.get("/about/n1/:id", async (req, res) => {
 });
 //关于苏立部分结束
 
-
 //新闻部分开始
 router.get("/news", async (req, res) => {
-    let result = await News.find().sort({ id: 1 });
-    // console.log(result)
-    res.render("news.html", { result });
-})
+	let result = await News.find().sort({ id: 1 });
+	// console.log(result)
+	res.render("news.html", { result });
+});
 router.get("/news/tradeNews", (req, res) => {
-    res.render("news/tradeNews.html")
-})
+	res.render("news/tradeNews.html");
+});
 router.get("/news/template/:id", async (req, res) => {
-    var id = req.params["id"]
-    // console.log(id);
-    res.type('html');
-    let result = await News.findById(id);
-    // console.log(result)
-    res.render("news/template.html", { result });
-    return;
-
+	var id = req.params["id"];
+	// console.log(id);
+	res.type("html");
+	let result = await News.findById(id);
+	// console.log(result)
+	res.render("news/template.html", { result });
+	return;
 });
 //新闻部分结束
 
 //产品展示部分开始
 router.get("/product", async (req, res) => {
-    let product = await Product.find();
-    let result = await Product_class.find({ name: "产品展示" });
-    let product_class = result[0];
-    // console.log(product_class);  //{ _id: new ObjectId("616d687598b65a1f54b9ffa2"), name: '产品展示' }
-    res.render("product.html", { product, product_class });
-})
+	let product = await Product.find();
+	let result = await Product_class.find({ name: "产品展示" });
+	let product_class = result[0];
+	// console.log(product_class);  //{ _id: new ObjectId("616d687598b65a1f54b9ffa2"), name: '产品展示' }
+	res.render("product.html", { product, product_class });
+});
 //产品展示部分结束
 
 //产品一级分类页面开始
 router.get("/product01", async (req, res) => {
-    let product = await Product.find({ category: 1 });
-    let result = await Product_class.find({ name: "清洁热能" });
-    let product_class = result[0];
-    res.render("product.html", { product, product_class });
-})
+	let product = await Product.find({ category: 1 });
+	let result = await Product_class.find({ name: "清洁热能" });
+	let product_class = result[0];
+	res.render("product.html", { product, product_class });
+});
 router.get("/product02", async (req, res) => {
-    let product = await Product.find({ category: 2 });
-    let result = await Product_class.find({ name: "健康电器" });
-    let product_class = result[0];
-    res.render("product.html", { product, product_class });
-})
+	let product = await Product.find({ category: 2 });
+	let result = await Product_class.find({ name: "健康电器" });
+	let product_class = result[0];
+	res.render("product.html", { product, product_class });
+});
 router.get("/product03", async (req, res) => {
-    let product = await Product.find({ category: 3 });
-    let result = await Product_class.find({ name: "电热部件" });
-    let product_class = result[0];
-    res.render("product.html", { product, product_class });
-})
+	let product = await Product.find({ category: 3 });
+	let result = await Product_class.find({ name: "电热部件" });
+	let product_class = result[0];
+	res.render("product.html", { product, product_class });
+});
 //产品一级分类页面结束
 
 //产品二级详情页面开始
 router.get("/product/:id", async (req, res) => {
-    var id = req.params["id"];
-    var result = await Product.findById(id);
-    res.render("product/detail.html", { product: result });
-})
+	var id = req.params["id"];
+	var result = await Product.findById(id);
+	res.render("product/detail.html", { product: result });
+});
 //产品二级详情页面结束
-
 
 //实验部分开始
 router.get("/exp", async (req, res) => {
-    let equipments = await Equipment.find();
-    res.render("exp.html", { equipments });
-})
+	let equipments = await Equipment.find();
+	res.render("exp.html", { equipments });
+});
 //实验部分结束
 
 // 实验中心二级详情页开始
 router.get("/exp/:id", async (req, res) => {
-    var url=req.originalUrl;
-    // console.log(url);  /exp/616d63d998b65a1f54b9ff6d
-    var id = req.params["id"];
-    var result = await Equipment.findById(id);
-    // 更新关注度
-    var update=  await Equipment.findByIdAndUpdate(
-        id,
-        { $inc: { view_num: 2 } },
-        { new: true }
-     );
-    res.render("exp/detail.html", { equipment: result });
+	var url = req.originalUrl;
+	// console.log(url);  /exp/616d63d998b65a1f54b9ff6d
+	var id = req.params["id"];
+	var result = await Equipment.findById(id);
+	// 更新关注度
+	var update = await Equipment.findByIdAndUpdate(
+		id,
+		{ $inc: { view_num: 2 } },
+		{ new: true }
+	);
+	res.render("exp/detail.html", { equipment: result });
 });
 // 实验中心二级详情页结束
 
 //招聘部分开始
 router.get("/recruit", (req, res) => {
-
 	res.render("recruit.html");
 });
 //招聘部分结束
 
 //招聘部分二级人才招聘页面开始
 router.get("/recruit/demand", (req, res) => {
-    res.render("recruit/demand.html");
-})
+	res.render("recruit/demand.html");
+});
 //招聘部分二级人才招聘页面结束
-
 
 //联系部分开始
 router.get("/contact", (req, res) => {
-
 	res.render("contact.html");
 });
 //联系部分结束
+
+//搜索新闻结果页面接口
+router.get("/search/serNews", (req, res) => {
+	res.render("search/serNews.html");
+});
+
+router.post("/search", async (req, res) => {
+	let body = req.body;
+	console.log(body);
+	if (body.sername == "新闻") {
+		const nquery = new RegExp(body.selinput, "g");
+		let result = await News.find({ title: nquery });
+        res.render("search/serNews.html",{result});
+      
+	} else if (body.sername == "产品") {
+		const pquery = new RegExp(body.selinput, "g");
+		let result = await Product.find({ name: pquery });
+        res.render("search/serNews.html",{product:result});
+	}
+
+});
 
 module.exports = router;

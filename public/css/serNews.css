@@ -1,0 +1,25 @@
+.exp .result {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.exp .result li {
+  list-style: none;
+  font-size: 16px;
+}
+.exp .result li a {
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.exp .result li a span:first-child {
+  color: #333;
+  font-size: 14px;
+}
+.exp .result li a span:last-of-type {
+  float: right;
+  background-color: #015cad;
+  color: #fff;
+}

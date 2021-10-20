@@ -39,7 +39,15 @@
     $(".dropdown-menu>.li1").mouseover(function () {
       $(".dropdown-menu>.li2").removeClass("active")
       $(".dropdown-menu>.li1").addClass("active")
-    })
+    });
+  </script>
+  <script>
+    $(".sel>a").click(function () {
+      let set = $(this).text();
+      $("#selcon").html(set);
+      $("#sertype").val(set);
+      return false;
+    });
   </script>
   <!--占坑-script  -->
   {{block 'script'}} {{/block}}
